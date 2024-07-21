@@ -77,6 +77,15 @@ class deck():
         self.cards = []
 
 
+def draw_start_hand(player_deck):
+    hand = []
+    for x in range(5):
+        hand.append(player_deck.cards.pop(0))
+
+    return hand
+
+
 if __name__ == "__main__":
-    create_draw_deck(0, "player 1")
+    player_deck = create_draw_deck(0, "player 1")
+    hand_cards = draw_start_hand(player_deck)
     print()
