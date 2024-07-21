@@ -25,13 +25,14 @@ class player_object():
         self.id = 0
         self.name = "player 0"
         self.create_deck()
-        self.hand = self.hand()
+        self.hand = []
         self.table = []
         self.manapool = []
         self.strategy = None
         self.graveyard = []
         self.health = 10
         self.hand_size = 5
+        self.next_draw_amount = 5
 
     def create_deck(self):
         self.draw_deck = create_draw_deck()
@@ -41,7 +42,7 @@ class player_object():
 
 
 
-def create_draw_deck(id, owner):
+def create_draw_deck(id=0, owner="player 1"):
     # Create Deck-object
     player_deck = deck_object()
     player_deck.id = id
@@ -52,7 +53,7 @@ def create_draw_deck(id, owner):
         player_deck.cards.append(card_object(card_dict))
     
     #Shuffle deck
-    # random.seed(player_deck.id)
+    random.seed(player_deck.id)
     random.shuffle(player_deck.cards)
     
     return player_deck
@@ -76,6 +77,8 @@ class card_object():
         self.attack = self.parsed_data["att"]
         self.defence = self.parsed_data["def"]
         self.abilities = self.parsed_data["ability"]
+        self.tapped = None
+        self.priority = 0
 
         # Remove redundant attribute from object
         del self.parsed_data

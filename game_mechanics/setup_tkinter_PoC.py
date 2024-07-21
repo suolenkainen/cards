@@ -9,6 +9,7 @@ This also creates the UI for following card values in stock market.
 from tkinter import *
 from tkinter import font
 import setup as cards
+from main_loop import setup_mock_game, game
 
 # Check that cards are present
 mock_deck = cards.create_draw_deck(1, "PoC")
@@ -81,9 +82,19 @@ def align_text_and_row(text, front_text = ""):
     return text
 
 
+players = setup_mock_game()
+
 create_card_to_UI(mock_hand)
 
+def time_print():
+    print("Timer tick")
+    game(players)
+    root.after(1000, time_print)
+
 # Run UI
+
+
+time_print()
 root.mainloop()
 
 
