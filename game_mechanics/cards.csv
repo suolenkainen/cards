@@ -1,0 +1,333 @@
+#	Name	Color	Type	Subtype	Region	Additional Subtype	Keywords	Rarity	Cost,,,,,,,,	ATT	DEF	Ability	Ability		
+0	Colourless Monster id-0	Colourless	Monster	Character		Legend	Colourless,Monster,Character,,Legend,Mythic,,,,	Mythic	Any,Any,Any,Any,Any,Any,Any,,						
+1	Blue Monster id-1	Blue	Monster				Blue,Monster,,,,Common,,,,	Common	Blue,,,,,,,,	1	1				
+2	Blue Enchantment id-2	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Common,Untap,,,	Common	Blue,,,,,,,,			Untap			
+3	Blue Monster id-3	Blue	Monster				Blue,Monster,,,,Common,,,,	Common	Blue,Blue,,,,,,,	2	1				
+4	Blue Monster id-4	Blue	Monster				Blue,Monster,,,,Common,Psychic (Enchantments don't cause damage),,,	Common	Blue,Any,,,,,,,	1	1	Psychic (Enchantments don't cause damage)			
+5	Blue Structure id-5	Blue	Structure	Fortress			Blue,Structure,Fortress,,,Common,Hydrolinetic Surge (ranged),Waterwalk,,	Common	Blue,Blue,,,,,,,			Hydrolinetic Surge (ranged)	Waterwalk		
+6	Blue Enchantment id-6	Blue	Enchantment	Interrupt			Blue,Enchantment,Interrupt,,,Common,Enchant creature,,,	Common	Blue,Any,,,,,,,			Enchant creature			
+7	Blue Enchantment id-7	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Common,Control,,,	Common	Blue,Any,,,,,,,			Control			
+8	Blue Item id-8	Blue	Item	Ability			Blue,Item,Ability,,,Common,Ring of Foresight,,,	Common	Blue,Blue,,,,,,,			Ring of Foresight			
+9	Blue Monster id-9	Blue	Monster				Blue,Monster,,,,Common,(tap) Psychic Blast,Cover,,	Common	Blue,Blue,Any,,,,,,	2	1	(tap) Psychic Blast	Cover		
+10	Blue Monster id-10	Blue	Monster	Wall			Blue,Monster,Wall,,,Common,Front line,Defender,,	Common	Blue,Blue,Any,,,,,,	4	0	Front line	Defender		
+11	Blue Monster id-11	Blue	Monster				Blue,Monster,,,,Common,,,,	Common	Blue,Any,Any,,,,,,	3	1				
+12	Blue Monster id-12	Blue	Monster				Blue,Monster,,,,Common,Bull Rush (red),,,	Common	Blue,Blue,Any,,,,,,	2	1	Bull Rush (red)			
+13	Blue Monster id-13	Blue	Monster				Blue,Monster,,,,Common,First strike,,,	Common	Blue,Any,Any,,,,,,	2	2	First strike			
+14	Blue Structure id-14	Blue	Structure	Spawning Pool			Blue,Structure,Spawning Pool,,,Common,Mana Fountain,,,	Common	Blue,Blue,Any,,,,,,			Mana Fountain			
+15	Counterspell	Blue	Enchantment	Interrupt			Blue,Enchantment,Interrupt,,,Common,Tempo,,,	Common	Blue,Any,Any,,,,,,			Tempo			
+16	Blue Enchantment id-16	Blue	Enchantment	Deck			Blue,Enchantment,Deck,,,Common,Aura of Tranquility,,,	Common	Blue,Blue,Any,,,,,,			Aura of Tranquility			
+17	Blue Enchantment id-17	Blue	Enchantment	System			Blue,Enchantment,System,,,Common,See cards,,,	Common	Blue,Any,Any,,,,,,			See cards			
+18	Blue Enchantment id-18	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Common,Aqua Shield,,,	Common	Blue,Any,Any,,,,,,			Aqua Shield			
+19	Blue Item id-19	Blue	Item	Ability			Blue,Item,Ability,,,Common,Control,,,	Common	Blue,Blue,Any,,,,,,			Control			
+20	Blue Item id-20	Blue	Item	Enhance			Blue,Item,Enhance,,,Common,Blink,Staff of Teleportation,,	Common	Blue,Blue,Blue,,,,,,			Blink	Staff of Teleportation		
+21	Blue Monster id-21	Blue	Monster				Blue,Monster,,,,Uncommon,Gravity Well,,,	Uncommon	Blue,Blue,Any,Any,,,,,	1	3	Gravity Well			
+22	Blue Monster id-22	Blue	Monster				Blue,Monster,,,,Uncommon,Psychic (Enchantments don't cause damage),,,	Uncommon	Blue,Blue,Blue,Any,,,,,	3	3	Psychic (Enchantments don't cause damage)			
+23	Blue Monster id-23	Blue	Monster				Blue,Monster,,,,Uncommon,Charge,,,	Uncommon	Blue,Blue,Blue,Any,,,,,	3	1	Charge			
+24	Blue Monster id-24	Blue	Monster				Blue,Monster,,,,Uncommon,Tap any non-blocking target,,,	Uncommon	Blue,Any,Any,Any,,,,,	3	2	Tap any non-blocking target			
+25	Blue Monster id-25	Blue	Monster				Blue,Monster,,,,Uncommon,Haste,Attacker,,	Uncommon	Blue,Any,Any,Any,,,,,	3	1	Haste	Attacker		
+26	Blue Structure id-26	Blue	Structure	Mana boost			Blue,Structure,Mana boost,,,Uncommon,Arcane Library,,,	Uncommon	Blue,Blue,Any,Any,,,,,			Arcane Library			
+27	Blue Enchantment id-27	Blue	Enchantment	Deck			Blue,Enchantment,Deck,,,Uncommon,Scry 3,Draw and discard 2,,	Uncommon	Blue,Blue,Blue,Any,,,,,			Scry 3	Draw and discard 2		
+28	Blue Enchantment id-28	Blue	Enchantment	Interrupt			Blue,Enchantment,Interrupt,,,Uncommon,Instead of playing the card, discard it,,,	Uncommon	Blue,Blue,Any,Any,,,,,			Instead of playing the card, discard it			
+29	Blue Enchantment id-29	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Uncommon,Control,,,	Uncommon	Blue,Blue,Blue,Any,,,,,			Control			
+30	Blue Enchantment id-30	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Uncommon,Change one item to another monster,,,	Uncommon	Blue,Blue,Blue,Any,,,,,			Change one item to another monster			
+31	Blue Item id-31	Blue	Item	Enhance			Blue,Item,Enhance,,,Uncommon,Time Manipulation,,,	Uncommon	Blue,Blue,Blue,Any,,,,,			Time Manipulation			
+32	Blue Monster id-32	Blue	Monster				Blue,Monster,,,,Rare,Mystic Healing (Every time blocking, gain 1 life.),,,	Rare	Blue,Blue,Blue,Any,Any,,,,	3	4	Mystic Healing (Every time blocking, gain 1 life.)			
+33	Blue Monster id-33	Blue	Monster				Blue,Monster,,,,Uncommon,Flying,,,	Uncommon	Blue,Any,Any,Any,Any,,,,	5	3	Flying			
+34	Blue Monster id-34	Blue	Monster				Blue,Monster,,,,Uncommon,Attacker,Vigilant,,	Uncommon	Blue,Blue,Any,Any,,,,,	5	1	Attacker	Vigilant		
+35	Blue Monster id-35	Blue	Monster				Blue,Monster,,,,Rare,Every time blocking, Create sprite.,Blue walk,,	Rare	Blue,Blue,Blue,Any,Any,,,,	2	4	Every time blocking, Create sprite.	Blue walk		
+36	Blue Structure id-36	Blue	Structure	Mana boost			Blue,Structure,Mana boost,,,Rare,Crystal Tower,,,	Rare	Blue,Blue,Blue,Any,Any,,,,			Crystal Tower			
+37	Blue Enchantment id-37	Blue	Enchantment	Deck			Blue,Enchantment,Deck,,,Uncommon,Scry 3,,,	Uncommon	Blue,Any,Any,Any,Any,,,,			Scry 3			
+38	Blue Enchantment id-38	Blue	Enchantment	Boon			Blue,Enchantment,Boon,,,Rare,Field of Illusions,,,	Rare	Blue,Blue,Blue,Any,Any,,,,			Field of Illusions			
+39	Blue Item id-39	Blue	Item	Ability			Blue,Item,Ability,,,Rare,Flying,Arcane Ward,,	Rare	Blue,Blue,Blue,Blue,Any,,,,			Flying	Arcane Ward		
+40	Blue Monster id-40	Blue	Monster				Blue,Monster,,,,Rare,Vigilant,Ready,Rejuvenate,	Rare	Blue,Blue,Any,Any,Any,Any,,,	5	2	Vigilant	Ready	Rejuvenate	
+41	Blue Monster id-41	Blue	Monster				Blue,Monster,,,,Mythic,Haste,,,	Mythic	Blue,Blue,Blue,Any,Any,Any,,,	6	3	Haste			
+42	Blue Monster id-42	Blue	Monster				Blue,Monster,,,,Mythic,Tap opponent blue mana,(Blue) Create sprite. May use opponent blue mana,,	Mythic	Blue,Blue,Blue,Any,Any,Any,,,	4	3	Tap opponent blue mana	(Blue) Create sprite. May use opponent blue mana		
+43	Blue Structure id-43	Blue	Structure	Mana boost			Blue,Structure,Mana boost,,,Rare,Elemental Forge,,,	Rare	Blue,Blue,Any,Any,Any,Any,,,			Elemental Forge			
+44	Blue Enchantment id-44	Blue	Enchantment	System			Blue,Enchantment,System,,,Rare,Control,,,	Rare	Blue,Blue,Blue,Blue,Any,Any,,,			Control			
+45	Blue Item id-45	Blue	Item	Enhance			Blue,Item,Enhance,,,Rare,Ethereal Form,,,	Rare	Blue,Blue,Blue,Blue,Any,Any,,,			Ethereal Form			
+46	Amulet of Tranquility	Green	Item	Ability			Green,Item,Ability,,,Uncommon,Grant 2 mana,Resilience,,	Uncommon	Green,Green,Green,Any,,,,,			Grant 2 mana	Resilience		
+47	Animate	Green	Item	Ability			Green,Item,Ability,,,Common,Animate,,,	Common	Green,Any,,,,,,,			Animate			
+48	Arbor of Abundance	Green	Structure	Spawning Pool			Green,Structure,Spawning Pool,,,Rare,Store 3 face up,Create treefolk,,	Rare	Green,Green,Any,Any,Any,Any,,,		4	Store 3 face up	Create treefolk		
+49	Archmage Loru'milas	Green	Monster	Elf	Yeetha	Wizard	Green,Monster,Elf,Yeetha,Wizard,Uncommon,Redirect spell,Grant Cover,,	Uncommon	Green,Any,Any,Any,Any,,,,	3	3	Redirect spell	Grant Cover		
+50	Branch Bond	Green	Item	Enhance			Green,Item,Enhance,,,Common,Merge treefolk token,Green walk,Ranged,	Common	Green,Green,Green,,,,,,			Merge treefolk token	Green walk	Ranged	
+51	Coiled Wurm	Green	Monster	Beast			Green,Monster,Beast,,,Common,First strike,,,	Common	Green,Any,,,,,,,	1	1	First strike			
+52	Cursed Briars	Green	Item	Enhance			"Green,Item,Enhance,,,Rare,Shock,Trample, Rejuvenate
+When attacking, the wearer disables all abilities of the blocker.,Trample,"	Rare	Green,Green,Green,Any,Any,,,,			Shock	"Trample, Rejuvenate
+When attacking, the wearer disables all abilities of the blocker."	Trample	
+53	Delicate Power	Green	Enchantment	Deck			Green,Enchantment,Deck,,,Uncommon,Draw 3, discard 1,Tap 2,,	Uncommon	Green,Green,Any,Any,,,,,			Draw 3, discard 1	Tap 2		
+54	Drain	Green	Enchantment	Interrupt			Green,Enchantment,Interrupt,,,Uncommon,Pillage,Draw card,,	Uncommon	Green,Any,Any,Any,,,,,			Pillage	Draw card		
+55	Enchanting Song	Green	Enchantment	Boon	Block		Green,Enchantment,Boon,Block,,Common,Restrict block 3,,,	Common	Green,Any,Any,,,,,,			Restrict block 3			
+56	Envoy of Harmony	Green	Monster	Elf		Diplomat	Green,Monster,Elf,,Diplomat,Common,Diplomat,Failed diplomacy,,	Common	Green,Any,Any,,,,,,	1	1	Diplomat	Failed diplomacy		
+57	Eternal Wisp	Green	Monster	Spirit			Green,Monster,Spirit,,,Uncommon,Draw or return,,,	Uncommon	Green,Green,Any,Any,,,,,	2	2	Draw or return			
+58	Etheral Rangers	Green	Monster	Elf		Ranger	Green,Monster,Elf,,Ranger,Common,Green walk,Ranged,,	Common	Green,Any,,,,,,,	1	0	Green walk	Ranged		
+59	Ethereal Guardians	Green	Monster	Sprite			Green,Monster,Sprite,,,Rare,Redirect spell,Forest dweller,,	Rare	Green,Green,Any,Any,Any,,,,	3	4	Redirect spell	Forest dweller		
+60	Faerie Circle	Green	Structure	Spawning Pool			Green,Structure,Spawning Pool,,,Rare,2 face down,Draw card,,	Rare	Green,Green,Green,Green,Any,,,,		3	2 face down	Draw card		
+61	Feral Behemoth	Green	Monster	Beast		Behemoth	Green,Monster,Beast,,Behemoth,Rare,Primal,Penetrate,,	Rare	Green,Green,Any,Any,Any,Any,,,	6	2	Primal	Penetrate		
+62	Grove of Abundance	Green	Structure	Spawning Pool			Green,Structure,Spawning Pool,,,Rare,2 face up,Respawn,,	Rare	Green,Green,Green,Green,Any,,,,		4	2 face up	Respawn		
+63	Illusory Abode	Green	Structure	Fortress			Green,Structure,Fortress,,,Rare,Cannot be attacked by monsters,2 face down,,	Rare	Green,Green,Green,Green,Any,,,,		3	Cannot be attacked by monsters	2 face down		
+64	Leaf Armor	Green	Item	Enhance			Green,Item,Enhance,,,Uncommon,Redirect spell,Rejuvenate,Spiky,	Uncommon	Green,Green,Any,Any,,,,,			Redirect spell	Rejuvenate	Spiky	
+65	Lifeweaver Unicorn	Green	Monster	Unicorn			Green,Monster,Unicorn,,,Mythic,Create treefolk,Forest folk,,	Mythic	Green,Green,Green,Green,Any,Any,,,	4	3	Create treefolk	Forest folk		
+66	Mana Bloom	Green	Enchantment	Deck			Green,Enchantment,Deck,,,Common,Search green mana,,,	Common	Green,Any,,,,,,,			Search green mana			
+67	Mirage Stag	Green	Monster	Beast		Stag	Green,Monster,Beast,,Stag,Rare,Trample,Charge,Ready,	Rare	Green,Green,Any,Any,Any,,,,	3	2	Trample	Charge	Ready	
+68	Nature's Wrath	Green	Enchantment	Interrupt			Green,Enchantment,Interrupt,,,Common,Sunder,Shatter,,	Common	Green,Any,Any,,,,,,			Sunder	Shatter		
+69	Primeval Treant	Green	Monster	Treefolk			Green,Monster,Treefolk,,,Mythic,Primal,Green walk,Overcome walls,	Mythic	Green,Green,Green,Any,Any,Any,,,	6	3	Primal	Green walk	Overcome walls	
+70	Protective Canopy	Green	Enchantment	Interrupt			Green,Enchantment,Interrupt,,,Common,Small tap,,,	Common	Green,Any,,,,,,,			Small tap			
+71	Quickstrike Prowler	Green	Monster	Beast		Feline	Green,Monster,Beast,,Feline,Uncommon,First strike,Pounce,,	Uncommon	Green,Any,Any,Any,,,,,	3	1	First strike	Pounce		
+72	Regrow	Green	Enchantment	Boon			Green,Enchantment,Boon,,,Uncommon,Regrow,Hurt,,	Uncommon	Green,Green,Any,Any,,,,,			Regrow	Hurt		
+73	Resiliency	Green	Enchantment	Boon			Green,Enchantment,Boon,,,Uncommon,Grand immunity,Draw 2,,	Uncommon	Green,Green,Any,Any,,,,,			Grand immunity	Draw 2		
+74	Rune Barbarian	Green	Monster	Elf		Barbarian	Green,Monster,Elf,,Barbarian,Common,Ready,Primal,Attacker,	Common	Green,Green,Green,,,,,,	3	2	Ready	Primal	Attacker	
+75	Sanctuary	Green	Structure	Fortress			Green,Structure,Fortress,,,Uncommon,Hard to handle,2 face up,,	Uncommon	Green,Green,Any,Any,,,,,		2	Hard to handle	2 face up		
+76	Sap Power	Green	Enchantment	Boon			Green,Enchantment,Boon,,,Common,Weaken,,,	Common	Green,,,,,,,,			Weaken			
+77	Spiked Path	Green	Structure	Trap			Green,Structure,Trap,,,Common,Spike Trap,Store 1 green (Face up),,	Common	Green,Green,Any,,,,,,		2	Spike Trap	Store 1 green (Face up)		
+78	Stag Beatle	Green	Monster	Insect			Green,Monster,Insect,,,Common,Cover,,,	Common	Green,Any,Any,,,,,,	2	2	Cover			
+79	Swarm of Sun Bees	Green	Monster	Insect			Green,Monster,Insect,,,Common,Bull Rush,Attacker,,	Common	Green,Green,Any,,,,,,	2	0	Bull Rush	Attacker		
+80	Tenuous Alliance	Green	Enchantment	System	Hand size		Green,Enchantment,System,Hand size,,Common,Raise hand limit,,,	Common	Green,Any,,,,,,,			Raise hand limit			
+81	Thundering Elk Herd	Green	Monster	Beast		Elk	Green,Monster,Beast,,Elk,Uncommon,Trample,Resilience,,	Uncommon	Green,Green,Any,Any,,,,,	3	2	Trample	Resilience		
+82	Venomous Bracers	Green	Item	Ability			Green,Item,Ability,,,Common,Grant poison,Green walk,Spiky,	Common	Green,Green,Any,,,,,,			Grant poison	Green walk	Spiky	
+83	Verdant Empowerment	Green	Enchantment	Boon			Green,Enchantment,Boon,,,Common,Thicker branch,,,	Common	Green,Any,Any,,,,,,			Thicker branch			
+84	Verdant Summoning	Green	Enchantment	System			Green,Enchantment,System,,,Common,Create treefolk 2,,,	Common	Green,Green,Green,,,,,,			Create treefolk 2			
+85	Verdant Viper	Green	Monster	Beast		Snake	Green,Monster,Beast,,Snake,Uncommon,Cover,Poison,,	Uncommon	Green,Green,Green,Any,,,,,	4	0	Cover	Poison		
+86	Wall of Thorns	Green	Monster	Wall			Green,Monster,Wall,,,Uncommon,Defender,Front line,Vulnerable to fire,Spiky	Uncommon	Green,Green,Any,Any,,,,,	1	4	Defender	Front line	Vulnerable to fire	Spiky
+87	Woodland Aegis	Green	Enchantment	Boon			Green,Enchantment,Boon,,,Uncommon,Restrict block 3,Tap 3,,	Uncommon	Green,Any,Any,Any,Any,,,,			Restrict block 3	Tap 3		
+88	Yeethan Enchantress	Green	Monster	Elf	Yeetha	Wizard	Green,Monster,Elf,Yeetha,Wizard,Uncommon,Mind control,,,	Uncommon	Green,Any,Any,Any,Any,,,,	2	4	Mind control			
+89	Yeethan Riders	Green	Monster	Elf	Yeetha		Green,Monster,Elf,Yeetha,,Common,Flying,,,	Common	Green,Green,Any,,,,,,	2	2	Flying			
+90	Yeetha's Amulet	Green	Item	Enhance	Combat		Green,Item,Enhance,Combat,,Common,Glade strength,Green walk,,	Common	Green,Green,Any,,,,,,			Glade strength	Green walk		
+91	Red Monster id-91	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,,,,,,,,		1				
+92	Red Enchantment id-92	Red	Enchantment	Boon			Red,Enchantment,Boon,,,Common,,,,	Common	Red,,,,,,,,						
+93	Red Monster id-93	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Any,,,,,,,		1				
+94	Red Monster id-94	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Any,,,,,,,		1				
+95	Red Structure id-95	Red	Structure	Trap			Red,Structure,Trap,,,Common,,,,	Common	Red,Any,,,,,,,						
+96	Red Enchantment id-96	Red	Enchantment	Boon			Red,Enchantment,Boon,,,Common,,,,	Common	Red,Any,,,,,,,						
+97	Red Enchantment id-97	Red	Enchantment	Deck			Red,Enchantment,Deck,,,Common,,,,	Common	Red,Red,,,,,,,						
+98	Red Item id-98	Red	Item	Ability			Red,Item,Ability,,,Common,Doesn't untap after attacking,Pay to return item to hand,,	Common	Red,Red,,,,,,,			Doesn't untap after attacking	Pay to return item to hand		
+99	Red Monster id-99	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Any,Any,,,,,,		1				
+100	Red Monster id-100	Red	Monster	Wall			Red,Monster,Wall,,,Common,Defender & Front line,,,	Common	Red,Any,Any,,,,,,	0	1	Defender & Front line			
+101	Red Monster id-101	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Red,Any,,,,,,		1				
+102	Red Monster id-102	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Red,Any,,,,,,		1				
+103	Red Monster id-103	Red	Monster				Red,Monster,,,,Common,,,,	Common	Red,Red,Any,,,,,,		1				
+104	Red Structure id-104	Red	Structure	Spawning Pool			Red,Structure,Spawning Pool,,,Common,,,,	Common	Red,Red,Red,,,,,,						
+105	Red Enchantment id-105	Red	Enchantment	Interrupt			Red,Enchantment,Interrupt,,,Common,,,,	Common	Red,Any,Any,,,,,,						
+106	Red Enchantment id-106	Red	Enchantment	Interrupt			Red,Enchantment,Interrupt,,,Common,,,,	Common	Red,Any,Any,,,,,,						
+107	Red Enchantment id-107	Red	Enchantment	Deck			Red,Enchantment,Deck,,,Common,,,,	Common	Red,Red,Any,,,,,,						
+108	Red Enchantment id-108	Red	Enchantment	Boon			Red,Enchantment,Boon,,,Common,,,,	Common	Red,Red,Any,,,,,,						
+109	Red Item id-109	Red	Item	Ability			Red,Item,Ability,,,Common,,,,	Common	Red,Any,Any,,,,,,						
+110	Red Item id-110	Red	Item	Enhance			Red,Item,Enhance,,,Common,,,,	Common	Red,Red,Any,,,,,,						
+111	Red Monster id-111	Red	Monster				Red,Monster,,,,Uncommon,Flying,,,	Uncommon	Red,Any,Any,Any,,,,,		1	Flying			
+112	Red Monster id-112	Red	Monster				Red,Monster,,,,Uncommon,First strike,Regenerate,,	Uncommon	Red,Red,Any,Any,,,,,		1	First strike	Regenerate		
+113	Red Monster id-113	Red	Monster				Red,Monster,,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,,,,,		1				
+114	Red Monster id-114	Red	Monster				Red,Monster,,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,,,,,		1				
+115	Red Monster id-115	Red	Monster				Red,Monster,,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,,,,,		1				
+116	Red Structure id-116	Red	Structure	Spawning Pool			Red,Structure,Spawning Pool,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,,,,,						
+117	Red Structure id-117	Red	Structure	Fortress			Red,Structure,Fortress,,,Uncommon,,,,	Uncommon	Red,Red,Red,Any,,,,,						
+118	Red Enchantment id-118	Red	Enchantment	Interrupt			Red,Enchantment,Interrupt,,,Uncommon,,,,	Uncommon	Red,Red,Red,Any,,,,,						
+119	Red Enchantment id-119	Red	Enchantment	Deck			Red,Enchantment,Deck,,,Uncommon,,,,	Uncommon	Red,Red,Red,Any,,,,,						
+120	Red Enchantment id-120	Red	Enchantment	System			Red,Enchantment,System,,,Uncommon,,,,	Uncommon	Red,Red,Red,Any,,,,,						
+121	Red Item id-121	Red	Item	Ability			Red,Item,Ability,,,Uncommon,,,,	Uncommon	Red,Red,Red,Any,,,,,						
+122	Red Monster id-122	Red	Monster				Red,Monster,,,,Rare,Trample,Attacker,,	Rare	Red,Red,Any,Any,Any,,,,		1	Trample	Attacker		
+123	Red Monster id-123	Red	Monster				Red,Monster,,,,Rare,,,,	Rare	Red,Red,Any,Any,Any,,,,		1				
+124	Red Monster id-124	Red	Monster				Red,Monster,,,,Rare,Regenerate,,,	Rare	Red,Red,Any,Any,Any,,,,		1	Regenerate			
+125	Red Monster id-125	Red	Monster				Red,Monster,,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,,,,		1				
+126	Red Structure id-126	Red	Structure	Fortress			Red,Structure,Fortress,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,,,,						
+127	Red Enchantment id-127	Red	Enchantment	Boon			Red,Enchantment,Boon,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,Any,,,,						
+128	Red Enchantment id-128	Red	Enchantment	System			Red,Enchantment,System,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,,,,						
+129	Red Item id-129	Red	Item	Enhance			Red,Item,Enhance,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,,,,						
+130	Red Monster id-130	Red	Monster				Red,Monster,,,,Rare,,,,	Rare	Red,Red,Any,Any,Any,Any,,,		1				
+131	Red Monster id-131	Red	Monster				Red,Monster,,,,Mythic,,,,	Mythic	Red,Red,Red,Any,Any,Any,,,		1				
+132	Red Monster id-132	Red	Monster				Red,Monster,,,,Mythic,,,,	Mythic	Red,Red,Red,Any,Any,Any,,,		1				
+133	Red Structure id-133	Red	Structure	Fortress			Red,Structure,Fortress,,,Rare,,,,	Rare	Red,Red,Red,Red,Any,Any,,,						
+134	Red Enchantment id-134	Red	Enchantment	Boon			Red,Enchantment,Boon,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,Any,,,						
+135	Red Item id-135	Red	Item	Ability			Red,Item,Ability,,,Rare,,,,	Rare	Red,Red,Red,Any,Any,Any,,,						
+136	Yellow Monster id-136	Yellow	Monster				Yellow,Monster,,,,Common,,,,	Common	Yellow,,,,,,,,		1				
+137	Yellow Enchantment id-137	Yellow	Enchantment	Boon			Yellow,Enchantment,Boon,,,Common,,,,	Common	Yellow,,,,,,,,						
+138	Yellow Monster id-138	Yellow	Monster				Yellow,Monster,,,,Common,,,,	Common	Yellow,Any,,,,,,,		1				
+139	Yellow Monster id-139	Yellow	Monster				Yellow,Monster,,,,Common,,,,	Common	Yellow,Any,,,,,,,		1				
+140	Yellow Structure id-140	Yellow	Structure	Mana boost			Yellow,Structure,Mana boost,,,Common,,,,	Common	Yellow,Any,,,,,,,						
+141	Perpetual Twilight	Yellow	Enchantment	Deck			Yellow,Enchantment,Deck,,,Common,,,,	Common	Yellow,Yellow,,,,,,,						
+142	Yellow Enchantment id-142	Yellow	Enchantment	Boon			Yellow,Enchantment,Boon,,,Common,,,,	Common	Yellow,Any,,,,,,,						
+143	Yellow Item id-143	Yellow	Item	Enhance			Yellow,Item,Enhance,,,Common,,,,	Common	Yellow,Any,,,,,,,						
+144	Yellow Monster id-144	Yellow	Monster				Yellow,Monster,,,,Common,First strike,,,	Common	Yellow,Yellow,Any,,,,,,		1	First strike			
+145	Yellow Monster id-145	Yellow	Monster				Yellow,Monster,,,,Common,Flying,,,	Common	Yellow,Any,Any,,,,,,		1	Flying			
+146	Yellow Monster id-146	Yellow	Monster				Yellow,Monster,,,,Common,Trample,,,	Common	Yellow,Any,Any,,,,,,		1	Trample			
+147	Yellow Monster id-147	Yellow	Monster				Yellow,Monster,,,,Common,,,,	Common	Yellow,Any,Any,,,,,,		1				
+148	Yellow Monster id-148	Yellow	Monster				Yellow,Monster,,,,Common,,,,	Common	Yellow,Any,Any,,,,,,		1				
+149	Yellow Structure id-149	Yellow	Structure	Fortress			Yellow,Structure,Fortress,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,						
+150	Yellow Enchantment id-150	Yellow	Enchantment	Interrupt			Yellow,Enchantment,Interrupt,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,						
+151	Yellow Enchantment id-151	Yellow	Enchantment	Deck			Yellow,Enchantment,Deck,,,Common,,,,	Common	Yellow,Any,Any,,,,,,						
+152	Yellow Enchantment id-152	Yellow	Enchantment	Interrupt			Yellow,Enchantment,Interrupt,,,Common,,,,	Common	Yellow,Any,Any,,,,,,						
+153	Yellow Enchantment id-153	Yellow	Enchantment	System			Yellow,Enchantment,System,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,						
+154	Yellow Item id-154	Yellow	Item	Ability			Yellow,Item,Ability,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,						
+155	Yellow Item id-155	Yellow	Item	Enhance			Yellow,Item,Enhance,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,						
+156	Yellow Monster id-156	Yellow	Monster				Yellow,Monster,,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,		1				
+157	Yellow Monster id-157	Yellow	Monster				Yellow,Monster,,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,		1				
+158	Yellow Monster id-158	Yellow	Monster				Yellow,Monster,,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,		1				
+159	Yellow Monster id-159	Yellow	Monster				Yellow,Monster,,,,Uncommon,,,,	Uncommon	Yellow,Any,Any,Any,,,,,		1				
+160	Yellow Monster id-160	Yellow	Monster				Yellow,Monster,,,,Uncommon,,,,	Uncommon	Yellow,Any,Any,Any,,,,,		1				
+161	Yellow Structure id-161	Yellow	Structure	Spawning Pool			Yellow,Structure,Spawning Pool,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,						
+162	Yellow Structure id-162	Yellow	Structure	Mana boost			Yellow,Structure,Mana boost,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,						
+163	Yellow Enchantment id-163	Yellow	Enchantment	Deck			Yellow,Enchantment,Deck,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,						
+164	Yellow Enchantment id-164	Yellow	Enchantment	Interrupt			Yellow,Enchantment,Interrupt,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,						
+165	Yellow Enchantment id-165	Yellow	Enchantment	Boon			Yellow,Enchantment,Boon,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,						
+166	Yellow Item id-166	Yellow	Item	Ability			Yellow,Item,Ability,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Yellow,Any,,,,,						
+167	Yellow Monster id-167	Yellow	Monster				Yellow,Monster,,,,Rare,,,,	Rare	Yellow,Yellow,Yellow,Any,Any,,,,		1				
+168	Yellow Monster id-168	Yellow	Monster				Yellow,Monster,,,,Rare,Flying,,,	Rare	Yellow,Yellow,Any,Any,Any,,,,		1	Flying			
+169	Yellow Monster id-169	Yellow	Monster				Yellow,Monster,,,,Rare,,,,	Rare	Yellow,Yellow,Any,Any,Any,,,,		1				
+170	Yellow Monster id-170	Yellow	Monster				Yellow,Monster,,,,Rare,,,,	Rare	Yellow,Yellow,Yellow,Any,Any,,,,		1				
+171	Yellow Structure id-171	Yellow	Structure	Fortress			Yellow,Structure,Fortress,,,Rare,Must pay any of life, or target mana source is destroyed,,,	Rare	Yellow,Yellow,Yellow,Any,Any,,,,			Must pay any of life, or target mana source is destroyed			
+172	Yellow Enchantment id-172	Yellow	Enchantment	System			Yellow,Enchantment,System,,,Rare,X mana sources turn to black,,,	Rare	Yellow,Yellow,Yellow,Any,Any,,,,			X mana sources turn to black			
+173	Yellow Enchantment id-173	Yellow	Enchantment	Interrupt			Yellow,Enchantment,Interrupt,,,Rare,,,,	Rare	Yellow,Yellow,Yellow,Any,Any,,,,						
+174	Yellow Item id-174	Yellow	Item	Ability			Yellow,Item,Ability,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,Any,,,,						
+175	Yellow Monster id-175	Yellow	Monster				Yellow,Monster,,,,Mythic,,,,	Mythic	Yellow,Yellow,Yellow,Any,Any,Any,,,		1				
+176	Yellow Monster id-176	Yellow	Monster				Yellow,Monster,,,,Rare,,,,	Rare	Yellow,Yellow,Any,Any,Any,Any,,,		1				
+177	Yellow Monster id-177	Yellow	Monster				Yellow,Monster,,,,Mythic,,,,	Mythic	Yellow,Yellow,Yellow,Any,Any,Any,,,		1				
+178	Yellow Structure id-178	Yellow	Structure	Trap			Yellow,Structure,Trap,,,Rare,,,,	Rare	Yellow,Yellow,Yellow,Yellow,Any,Any,,,						
+179	Yellow Enchantment id-179	Yellow	Enchantment	Boon			Yellow,Enchantment,Boon,,,Rare,,,,	Rare	Yellow,Yellow,Any,Any,Any,Any,,,						
+180	Yellow Item id-180	Yellow	Item	Enhance			Yellow,Item,Enhance,,,Rare,,,,	Rare	Yellow,Yellow,Yellow,Yellow,Any,Any,,,						
+181	Black Monster id-181	Black	Monster				Black,Monster,,,,Common,Always bury instead of braveyard,,,	Common	Black,Any,,,,,,,		1	Always bury instead of braveyard			
+182	Black Enchantment id-182	Black	Enchantment	Interrupt			Black,Enchantment,Interrupt,,,Common,Create a shadow to block,,,	Common	Black,Any,,,,,,,			Create a shadow to block			
+183	Black Enchantment id-183	Black	Enchantment	Deck			Black,Enchantment,Deck,,,Common,Remove 2 cards from Grave yard to gain 2 Shadow tokens,,,	Common	Black,Any,,,,,,,			Remove 2 cards from Grave yard to gain 2 Shadow tokens			
+184	Black Item id-184	Black	Item	Enhance			Black,Item,Enhance,,,Common,Gain +1 from shadows,,,	Common	Black,Black,,,,,,,			Gain +1 from shadows			
+185	Black Monster id-185	Black	Monster			Shadow	Black,Monster,,,Shadow,Common,Black walk,,,	Common	Black,Any,Any,,,,,,	2	2	Black walk			
+186	Hex Frog	Black	Monster				Black,Monster,,,,Common,Hex,,,	Common	Black,Any,Any,,,,,,		1	Hex			
+187	Weed Wall	Black	Monster	Wall			Black,Monster,Wall,,,Common,Defender & Front line,Entangle, poison,,	Common	Black,Black,Any,,,,,,	0	1	Defender & Front line	Entangle, poison		
+188	Black Enchantment id-188	Black	Enchantment	Interrupt			Black,Enchantment,Interrupt,,,Common,Target Monster gains -2/-1,,,	Common	Black,Black,Any,,,,,,			Target Monster gains -2/-1			
+189	Black Structure id-189	Black	Structure	Spawning Pool			Black,Structure,Spawning Pool,,,Common,(Black): deal 1 damage to all Monsters and players. Store Health,,,	Common	Black,Black,Black,,,,,,			(Black): deal 1 damage to all Monsters and players. Store Health			
+190	Black Enchantment id-190	Black	Enchantment	Boon			Black,Enchantment,Boon,,,Common,Each turn, give 1 counter to opponent. If they have 10, they lose game.,,,	Common	Black,Black,Any,,,,,,			Each turn, give 1 counter to opponent. If they have 10, they lose game.			
+191	Black Monster id-191	Black	Monster				Black,Monster,,,,Uncommon,Drain,,,	Uncommon	Black,Black,Any,Any,,,,,		1	Drain			
+192	Black Monster id-192	Black	Monster				Black,Monster,,,,Uncommon,rediredt,,,	Uncommon	Black,Black,Any,Any,,,,,		1	rediredt			
+193	Black Monster id-193	Black	Monster			Shadow	Black,Monster,,,Shadow,Uncommon,Attacker,+1 for every victory,,	Uncommon	Black,Any,Any,Any,,,,,		1	Attacker	+1 for every victory		
+194	Black Monster id-194	Black	Monster				Black,Monster,,,,Uncommon,Trample,If doesn't/cannot attack, bury,,	Uncommon	Black,Black,Any,Any,,,,,		1	Trample	If doesn't/cannot attack, bury		
+195	Black Enchantment id-195	Black	Enchantment	Interrupt			Black,Enchantment,Interrupt,,,Uncommon,Bury target and its items.,,,	Uncommon	Black,Black,Any,Any,,,,,			Bury target and its items.			
+196	Black Structure id-196	Black	Structure	Fortress			Black,Structure,Fortress,,,Uncommon,Pay hralth to untap. Store health,,,	Uncommon	Black,Black,Black,Any,,,,,			Pay hralth to untap. Store health			
+197	Black Enchantment id-197	Black	Enchantment	System			Black,Enchantment,System,,,Uncommon,Opponent discards 1 and lower their hand limit by 1,,,	Uncommon	Black,Black,Any,Any,,,,,			Opponent discards 1 and lower their hand limit by 1			
+198	Black Item id-198	Black	Item	Ability			Black,Item,Ability,,,Uncommon,Redirect and drain cost,,,	Uncommon	Black,Black,Black,Any,,,,,			Redirect and drain cost			
+199	Black Monster id-199	Black	Monster				Black,Monster,,,,Uncommon,Drain,,,	Uncommon	Black,Black,Any,Any,,,,,		1	Drain			
+200	Black Monster id-200	Black	Monster				Black,Monster,,,,Rare,First strike,Tap: Target becomes 0/2,,	Rare	Black,Black,Any,Any,Any,,,,		1	First strike	Tap: Target becomes 0/2		
+201	Black Monster id-201	Black	Monster			Shadow	Black,Monster,,,Shadow,Rare,Trample,Attack bonus = Shadow tokens,,	Rare	Black,Black,Black,Any,Any,,,,	2	4	Trample	Attack bonus = Shadow tokens		
+202	Black Enchantment id-202	Black	Enchantment	Interrupt			Black,Enchantment,Interrupt,,,Rare,Put monsters to graveyard, each monster opponent discards,,,	Rare	Black,Black,Black,Any,Any,,,,			Put monsters to graveyard, each monster opponent discards			
+203	Black Enchantment id-203	Black	Enchantment	Deck			Black,Enchantment,Deck,,,Rare,target discards whole hand,,,	Rare	Black,Black,Black,Any,Any,,,,			target discards whole hand			
+204	Black Item id-204	Black	Item	Ability			Black,Item,Ability,,,Rare,Vigilant,Haste,,	Rare	Black,Black,Black,Any,Any,,,,			Vigilant	Haste		
+205	Swamp Drake	Black	Monster				Black,Monster,,,,Mythic,Black walk,Poison,Ranged,	Mythic	Black,Black,Black,Any,Any,Any,,,		1	Black walk	Poison	Ranged	
+206	Black Monster id-206	Black	Monster			Undead	Black,Monster,,,Undead,Mythic,(Life): Draw card from graveyard,,,	Mythic	Black,Black,Black,Any,Any,Any,,,		1	(Life): Draw card from graveyard			
+207	Black Monster id-207	Black	Monster			Undead	Black,Monster,,,Undead,Mythic,On entry: create a shadow for each monster in play.,Grant Black walk to shadows,,	Mythic	Black,Black,Black,Any,Any,Any,,,		1	On entry: create a shadow for each monster in play.	Grant Black walk to shadows		
+208	Black Structure id-208	Black	Structure	Spawning Pool			Black,Structure,Spawning Pool,,,Rare,(Life): As an interrupt, resurrect from graveyard to hand,,,	Rare	Black,Black,Black,Black,Any,Any,,,			(Life): As an interrupt, resurrect from graveyard to hand			
+209	Black Enchantment id-209	Black	Enchantment	Boon			Black,Enchantment,Boon,,,Rare,Remove shadows, gain +1 for each token,,,	Rare	Black,Black,Black,Any,Any,Any,,,			Remove shadows, gain +1 for each token			
+210	Black Monster id-210	Black	Monster			Vampire	Black,Monster,,,Vampire,Mythic,Pay to stay in play. Negated by white attack,Gain life equal to enemy defence if defeated,,	Mythic	Black,Black,Black,Any,Any,Any,Any,,	7	3	Pay to stay in play. Negated by white attack	Gain life equal to enemy defence if defeated		
+211	White Monster id-211	White	Monster				White,Monster,,,,Common,,,,	Common	White,Any,,,,,,,		1				
+212	Rejuvenate	White	Enchantment	Interrupt			White,Enchantment,Interrupt,,,Common,Rejuvenate,,,	Common	White,Any,,,,,,,			Rejuvenate			
+213	White Enchantment id-213	White	Enchantment	Interrupt			White,Enchantment,Interrupt,,,Common,,,,	Common	White,White,,,,,,,						
+214	White Enchantment id-214	White	Enchantment	Boon			White,Enchantment,Boon,,,Common,,,,	Common	White,Any,,,,,,,						
+215	White Monster id-215	White	Monster				White,Monster,,,,Common,Trample,,,	Common	White,Any,Any,,,,,,		1	Trample			
+216	White Monster id-216	White	Monster				White,Monster,,,,Common,,,,	Common	White,White,Any,,,,,,		1				
+217	White Monster id-217	White	Monster				White,Monster,,,,Common,Flying,Attacker,,	Common	White,White,Any,,,,,,		1	Flying	Attacker		
+218	White Enchantment id-218	White	Enchantment	Deck			White,Enchantment,Deck,,,Common,Discard X cards, gain as many life,,,	Common	White,Any,Any,,,,,,			Discard X cards, gain as many life			
+219	White Item id-219	White	Item	Ability			White,Item,Ability,,,Common,,,,	Common	White,White,White,,,,,,						
+220	White Item id-220	White	Item	Enhance			"White,Item,Enhance,,,Common,""Spell shield"" PREVENT-DAMAGE AMOUNT(all) TYPE(enchantment),,,"	Common	White,White,Any,,,,,,			"""Spell shield"" PREVENT-DAMAGE AMOUNT(all) TYPE(enchantment)"			
+221	White Monster id-221	White	Monster				White,Monster,,,,Uncommon,Flying,Gain life on entry,,	Uncommon	White,White,Any,Any,,,,,		1	Flying	Gain life on entry		
+222	White Monster id-222	White	Monster				White,Monster,,,,Uncommon,,,,	Uncommon	White,White,Any,Any,,,,,		1				
+223	White Monster id-223	White	Monster				White,Monster,,,,Uncommon,,,,	Uncommon	White,Any,Any,Any,,,,,		1				
+224	White Monster id-224	White	Monster				White,Monster,,,,Uncommon,,,,	Uncommon	White,White,Any,Any,,,,,		1				
+225	White Structure id-225	White	Structure	Spawning Pool			White,Structure,Spawning Pool,,,Uncommon,Discard 1, gain 1 life,,,	Uncommon	White,White,Any,Any,,,,,			Discard 1, gain 1 life			
+226	White Enchantment id-226	White	Enchantment	Interrupt			White,Enchantment,Interrupt,,,Uncommon,Target Monster gains 0/+2,,,	Uncommon	White,White,Any,Any,,,,,			Target Monster gains 0/+2			
+227	White Enchantment id-227	White	Enchantment	Boon			White,Enchantment,Boon,,,Uncommon,All attacking creatures gain +2/+0 until end of turn,,,	Uncommon	White,White,Any,Any,,,,,			All attacking creatures gain +2/+0 until end of turn			
+228	White Item id-228	White	Item	Enhance			White,Item,Enhance,,,Uncommon,,,,	Uncommon	White,White,White,Any,,,,,						
+229	White Monster id-229	White	Monster				White,Monster,,,,Rare,Retaliate,,,	Rare	White,White,Any,Any,Any,,,,		1	Retaliate			
+230	White Monster id-230	White	Monster				White,Monster,,,,Rare,First strike,,,	Rare	White,White,Any,Any,Any,,,,		1	First strike			
+231	White Monster id-231	White	Monster				White,Monster,,,,Rare,Flying,,,	Rare	White,White,White,Any,Any,,,,		1	Flying			
+232	White Structure id-232	White	Structure	Fortress			White,Structure,Fortress,,,Rare,Store 2 face down,All Angels gain +1 and Flying.,,	Rare	White,White,White,Any,Any,Any,,,		3	Store 2 face down	All Angels gain +1 and Flying.		
+233	White Enchantment id-233	White	Enchantment	Deck			White,Enchantment,Deck,,,Uncommon,Gain life per any card discarded from structures,,,	Uncommon	White,White,Any,Any,Any,,,,			Gain life per any card discarded from structures			
+234	White Item id-234	White	Item	Enhance			White,Item,Enhance,,,Uncommon,1,Trample,Destroy blocker's item,	Uncommon	White,Any,Any,Any,,,,,			1	Trample	Destroy blocker's item	
+235	White Monster id-235	White	Monster				White,Monster,,,,Mythic,,,,	Mythic	White,White,White,Any,Any,Any,,,		1				
+236	White Monster id-236	White	Monster				White,Monster,,,,Rare,,,,	Rare	White,White,Any,Any,Any,Any,,,		1				
+237	White Monster id-237	White	Monster				White,Monster,,,,Mythic,,,,	Mythic	White,White,White,White,Any,Any,,,		1				
+238	White Enchantment id-238	White	Enchantment	System			White,Enchantment,System,,,Rare,,,,	Rare	White,White,White,White,Any,Any,,,						
+239	White Enchantment id-239	White	Enchantment	Boon			White,Enchantment,Boon,,,Rare,,,,	Rare	White,White,White,Any,Any,Any,,,						
+240	White Structure id-240	White	Structure	Mana boost			White,Structure,Mana boost,,,Mythic,Store 2 face down,Store life 3,Draw card,	Mythic	White,White,White,White,Any,Any,Any,,		3	Store 2 face down	Store life 3	Draw card	
+241	Brown Monster id-241	Brown	Monster	Wall			Brown,Monster,Wall,,,Common,Defender & Front line,,,	Common	Brown,Any,,,,,,,	0	1	Defender & Front line			
+242	Brown Enchantment id-242	Brown	Enchantment	Interrupt			Brown,Enchantment,Interrupt,,,Common,,,,	Common	Brown,Any,,,,,,,						
+243	Brown Item id-243	Brown	Item	Enhance			Brown,Item,Enhance,,,Common,,,,	Common	Brown,Any,,,,,,,						
+244	Brown Structure id-244	Brown	Structure	Trap			Brown,Structure,Trap,,,Common,,,,	Common	Brown,Any,,,,,,,						
+245	Brown Monster id-245	Brown	Monster				Brown,Monster,,,,Common,,,,	Common	Brown,Brown,Any,,,,,,		1				
+246	Crystal Wall	Brown	Monster	Wall			"Brown,Monster,Wall,,,Common,Defender & Front line,""Shatter"" DAMAGE-TARGET CONDITION(after death), TARGET(monster/player), DAMAGE(2),,"	Common	Brown,Brown,Any,,,,,,	0	1	Defender & Front line	"""Shatter"" DAMAGE-TARGET CONDITION(after death), TARGET(monster/player), DAMAGE(2)"		
+247	Brown Enchantment id-247	Brown	Enchantment	Deck			Brown,Enchantment,Deck,,,Common,,,,	Common	Brown,Brown,Any,,,,,,						
+248	Brown Enchantment id-248	Brown	Enchantment	Interrupt			Brown,Enchantment,Interrupt,,,Common,,,,	Common	Brown,Brown,Any,,,,,,						
+249	Brown Item id-249	Brown	Item	Ability			Brown,Item,Ability,,,Common,,,,	Common	Brown,Brown,Any,,,,,,						
+250	Brown Structure id-250	Brown	Structure	Mana boost			Brown,Structure,Mana boost,,,Common,,,,	Common	Brown,Brown,Any,,,,,,						
+251	Brown Monster id-251	Brown	Monster				Brown,Monster,,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,		1				
+252	Brown Monster id-252	Brown	Monster				Brown,Monster,,,,Uncommon,Trample,,,	Uncommon	Brown,Brown,Any,Any,,,,,		1	Trample			
+253	Brown Enchantment id-253	Brown	Enchantment	Interrupt			Brown,Enchantment,Interrupt,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,						
+254	Brown Enchantment id-254	Brown	Enchantment	Boon			Brown,Enchantment,Boon,,,Uncommon,,,,	Uncommon	Brown,Brown,Brown,Any,,,,,						
+255	Brown Item id-255	Brown	Item	Enhance			Brown,Item,Enhance,,,Uncommon,,,,	Uncommon	Brown,Brown,Brown,Any,,,,,						
+256	Brown Item id-256	Brown	Item	Ability			Brown,Item,Ability,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,						
+257	Brown Structure id-257	Brown	Structure	Fortress			Brown,Structure,Fortress,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,						
+258	Brown Structure id-258	Brown	Structure	Trap			Brown,Structure,Trap,,,Uncommon,,,,	Uncommon	Brown,Brown,Brown,Any,,,,,						
+259	Brown Monster id-259	Brown	Monster				Brown,Monster,,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,		1				
+260	Brown Monster id-260	Brown	Monster				Brown,Monster,,,,Rare,Trample,,,	Rare	Brown,Brown,Any,Any,Any,,,,		1	Trample			
+261	Brown Enchantment id-261	Brown	Enchantment	Deck			Brown,Enchantment,Deck,,,Rare,,,,	Rare	Brown,Brown,Brown,Any,Any,,,,						
+262	Brown Enchantment id-262	Brown	Enchantment	System			Brown,Enchantment,System,,,Rare,,,,	Rare	Brown,Brown,Brown,Any,Any,,,,						
+263	Brown Item id-263	Brown	Item	Enhance			Brown,Item,Enhance,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,Any,,,,						
+264	Brown Structure id-264	Brown	Structure	Spawning Pool			Brown,Structure,Spawning Pool,,,Rare,,,,	Rare	Brown,Brown,Brown,Any,Any,,,,						
+265	Brown Monster id-265	Brown	Monster				Brown,Monster,,,,Rare,,,,	Rare	Brown,Brown,Any,Any,Any,Any,,,		1				
+266	Brown Monster id-266	Brown	Monster				Brown,Monster,,,,Mythic,First strike,,,	Mythic	Brown,Brown,Brown,Any,Any,Any,,,		1	First strike			
+267	Brown Enchantment id-267	Brown	Enchantment	Boon			Brown,Enchantment,Boon,,,Rare,,,,	Rare	Brown,Brown,Brown,Any,Any,Any,,,						
+268	Brown Enchantment id-268	Brown	Enchantment	Deck			Brown,Enchantment,Deck,,,Rare,,,,	Rare	Brown,Brown,Brown,Any,Any,Any,,,						
+269	Brown Structure id-269	Brown	Structure	Fortress			Brown,Structure,Fortress,,,Rare,,,,	Rare	Brown,Brown,Brown,Brown,Any,Any,,,						
+270	Brown Item id-270	Brown	Item	Ability			Brown,Item,Ability,,,Mythic,,,,	Mythic	Brown,Brown,Brown,Any,Any,Any,Any,,						
+271	Colorless Monster id-271	Colorless	Monster				Colorless,Monster,,,,Common,,,,	Common	Any,Any,Any,,,,,,		1				
+272	Colorless Monster id-272	Colorless	Monster				Colorless,Monster,,,,Common,First strike,Attacker,,	Common	Any,Any,Any,,,,,,	3	0	First strike	Attacker		
+273	Colorless Enchantment id-273	Colorless	Enchantment	Interrupt			Colorless,Enchantment,Interrupt,,,Common,,,,	Common	Any,Any,Any,,,,,,						
+274	Colorless Monster id-274	Colorless	Monster				Colorless,Monster,,,,Uncommon,,,,	Uncommon	Any,Any,Any,Any,,,,,		1				
+275	Colorless Monster id-275	Colorless	Monster				Colorless,Monster,,,,Uncommon,,,,	Uncommon	Any,Any,Any,Any,,,,,		1				
+276	Colorless Structure id-276	Colorless	Structure	Spawning Pool			Colorless,Structure,Spawning Pool,,,Uncommon,No Monster with mana cost more than 3 can untap.,,,	Uncommon	Any,Any,Any,Any,,,,,			No Monster with mana cost more than 3 can untap.			
+277	Colorless Item id-277	Colorless	Item	Ability			Colorless,Item,Ability,,,Uncommon,,,,	Uncommon	Any,Any,Any,Any,Any,,,,						
+278	Colorless Monster id-278	Colorless	Monster				Colorless,Monster,,,,Uncommon,Flying,,,	Uncommon	Any,Any,Any,Any,Any,,,,		1	Flying			
+279	Colorless Enchantment id-279	Colorless	Enchantment	Boon			Colorless,Enchantment,Boon,,,Uncommon,,,,	Uncommon	Any,Any,Any,Any,Any,,,,						
+280	Colorless Structure id-280	Colorless	Structure	Fortress			Colorless,Structure,Fortress,,,Uncommon,,,,	Uncommon	Any,Any,Any,Any,Any,,,,						
+281	Colorless Monster id-281	Colorless	Monster				Colorless,Monster,,,,Rare,,,,	Rare	Any,Any,Any,Any,Any,Any,,,		1				
+282	Colorless Enchantment id-282	Colorless	Enchantment	System			Colorless,Enchantment,System,,,Rare,,,,	Rare	Any,Any,Any,Any,Any,Any,,,						
+283	Colorless Monster id-283	Colorless	Monster				Colorless,Monster,,,,Mythic,,,,	Mythic	Any,Any,Any,Any,Any,Any,Any,,		1				
+284	Colorless Enchantment id-284	Colorless	Enchantment	Deck			Colorless,Enchantment,Deck,,,Mythic,,,,	Mythic	Any,Any,Any,Any,Any,Any,Any,,						
+285	Colorless Structure id-285	Colorless	Structure	Mana boost			Colorless,Structure,Mana boost,,,Mythic,,,,	Mythic	Any,Any,Any,Any,Any,Any,Any,Any,						
+286	Blue Monster id-286	Blue	Monster	Legend			Blue,Monster,Legend,,,Common,Psychic (Enchantments don't cause damage),,,	Common	Blue,Blue,Any,,,,,,	2	2	Psychic (Enchantments don't cause damage)			
+287	Awalith, Court Hydromancer	Blue	Monster	Character			Blue,Monster,Character,,,Rare,Elemental mastery all sprites gain flying,,,	Rare	Blue,Blue,Blue,Any,Any,,,,	4	4	Elemental mastery all sprites gain flying			
+288	Archmage Elo'starath	Blue	Monster	Character			Blue,Monster,Character,,,Rare,(Blue) Scry 1,Spellweaving, force enemy mana to be blue,,	Rare	Blue,Blue,Any,Any,Any,,,,	3	1	(Blue) Scry 1	Spellweaving, force enemy mana to be blue		
+289	Yamon, Branch Shaman	Green	Monster	Character	Yeetha	Shaman	Green,Monster,Character,Yeetha,Shaman,Common,Create treefolk,,,	Common	Green,Green,Any,,,,,,	2	2	Create treefolk			
+290	General Berush the Indominable	Green	Monster	Character	Yeetha	General	Green,Monster,Character,Yeetha,General,Uncommon,Commander,Green walk,,	Uncommon	Green,Green,Any,Any,,,,,	3	2	Commander	Green walk		
+291	Blue/Green Legend id-291	Blue/Green	Legend	Character		Legend	Blue/Green,Legend,Character,,Legend,Rare,,,,	Rare	Green,Green,Blue,Blue,Any,Any,,,		1				
+292	Red Monster id-292	Red	Monster	Character			Red,Monster,Character,,,Common,,,,	Common	Red,Red,Any,,,,,,		1				
+293	Red Monster id-293	Red	Monster	Character			Red,Monster,Character,,,Uncommon,,,,	Uncommon	Red,Red,Any,Any,,,,,		1				
+294	Red Monster id-294	Red	Monster	Character			Red,Monster,Character,,,Rare,,,,	Rare	Red,Red,Any,Any,Any,,,,		1				
+295	Yellow Monster id-295	Yellow	Monster	Character			Yellow,Monster,Character,,,Common,,,,	Common	Yellow,Yellow,Any,,,,,,		1				
+296	Yellow Monster id-296	Yellow	Monster	Character			Yellow,Monster,Character,,,Uncommon,,,,	Uncommon	Yellow,Yellow,Any,Any,,,,,		1				
+297	Yellow Monster id-297	Yellow	Monster	Character			Yellow,Monster,Character,,,Rare,,,,	Rare	Yellow,Yellow,Any,Any,Any,,,,		1				
+298	Black Monster id-298	Black	Monster	Character			Black,Monster,Character,,,Uncommon,,,,	Uncommon	Black,Black,Any,Any,,,,,		1				
+299	Black Monster id-299	Black	Monster	Character			Black,Monster,Character,,,Rare,,,,	Rare	Black,Black,Any,Any,Any,Any,,,		1				
+300	White Monster id-300	White	Monster	Character			White,Monster,Character,,,Uncommon,,,,	Uncommon	White,White,Any,Any,,,,,		1				
+301	White/Black Monster id-301	White/Black	Monster	Character		Legend	White/Black,Monster,Character,,Legend,Mythic,,,,	Mythic	White,White,Black,Black,Any,Any,,,		1				
+302	Brown Monster id-302	Brown	Monster	Character			Brown,Monster,Character,,,Uncommon,,,,	Uncommon	Brown,Brown,Any,Any,,,,,		1				
+303	Brown Monster id-303	Brown	Monster	Character			Brown,Monster,Character,,,Rare,,,,	Rare	Brown,Brown,Any,Any,Any,,,,		1				
+304	Blue Mana id-304	Blue	Mana	Mana source			Blue,Mana,Mana source,,,,,,,								
+305	Blue Mana id-305	Blue	Mana	Mana source			Blue,Mana,Mana source,,,,,,,								
+306	Blue Mana id-306	Blue	Mana	Mana source			Blue,Mana,Mana source,,,,,,,								
+307	Green Mana id-307	Green	Mana	Mana source			Green,Mana,Mana source,,,,,,,								
+308	Green Mana id-308	Green	Mana	Mana source			Green,Mana,Mana source,,,,,,,								
+309	Green Mana id-309	Green	Mana	Mana source			Green,Mana,Mana source,,,,,,,								
+310	Red Mana id-310	Red	Mana	Mana source			Red,Mana,Mana source,,,,,,,								
+311	Red Mana id-311	Red	Mana	Mana source			Red,Mana,Mana source,,,,,,,								
+312	Red Mana id-312	Red	Mana	Mana source			Red,Mana,Mana source,,,,,,,								
+313	Yellow Mana id-313	Yellow	Mana	Mana source			Yellow,Mana,Mana source,,,,,,,								
+314	Yellow Mana id-314	Yellow	Mana	Mana source			Yellow,Mana,Mana source,,,,,,,								
+315	Yellow Mana id-315	Yellow	Mana	Mana source			Yellow,Mana,Mana source,,,,,,,								
+316	Black Mana id-316	Black	Mana	Mana source			Black,Mana,Mana source,,,,,,,								
+317	Black Mana id-317	Black	Mana	Mana source			Black,Mana,Mana source,,,,,,,								
+318	White Mana id-318	White	Mana	Mana source			White,Mana,Mana source,,,,,,,								
+319	White Mana id-319	White	Mana	Mana source			White,Mana,Mana source,,,,,,,								
+320	Brown Mana id-320	Brown	Mana	Mana source			Brown,Mana,Mana source,,,,,,,								
+321	Brown Mana id-321	Brown	Mana	Mana source			Brown,Mana,Mana source,,,,,,,								
+322	Blue mana (special)	Blue	Mana	Mana source			Blue,Mana,Mana source,,,,,,,								
+323	Green mana (special)	Green	Mana	Mana source			Green,Mana,Mana source,,,,,,,								
+324	Red mana (special)	Red	Mana	Mana source			Red,Mana,Mana source,,,,,,,								
+325	Yellow mana (special)	Yellow	Mana	Mana source			Yellow,Mana,Mana source,,,,,,,								
+326	Black mana (special)	Black	Mana	Mana source			Black,Mana,Mana source,,,,,,,								
+327	White mana (special)	White	Mana	Mana source			White,Mana,Mana source,,,,,,,								
+328	Brown mana (special)	Brown	Mana	Mana source			Brown,Mana,Mana source,,,,,,,								
+329	Treefolk	Green	Monster	Token		Treefolk	Green,Monster,Token,,Treefolk,,,,,								
