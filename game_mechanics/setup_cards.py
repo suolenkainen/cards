@@ -1,12 +1,13 @@
-from csv import DictReader
-import random
-
 """
 Read the contents of a csv file and create a deck based on that.
 The deck() class is also used to create graveyard deck.
 
 To chose the source of data, uncomment which ever file is needed
 """
+
+from csv import DictReader
+import random
+
 
 # with open('C:\\Users\\pmarj\\OneDrive\\Documents\\Cards\\cards\\game_mechanics\\cards.csv', 'r') as file:
 # with open('C:\\Users\\pmarj\\OneDrive\\Documents\\Cards\\cards\\game_mechanics\\cards_test.csv', 'r') as file:
