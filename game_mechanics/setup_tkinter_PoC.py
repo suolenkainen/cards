@@ -8,7 +8,7 @@ This also creates the UI for following card values in stock market.
 
 from tkinter import *
 from tkinter import font
-import setup_cards as cards
+import setup as cards
 
 # Check that cards are present
 mock_deck = cards.create_draw_deck(1, "PoC")
@@ -76,10 +76,8 @@ def align_text_and_row(text, front_text = ""):
     max_width = 90
     text_object = font.Font(family="Arial", size=9)
     width_in_pixels = text_object.measure(text)
-    print(width_in_pixels)
     if width_in_pixels > max_width:
         text = text.replace(" ", "\n")
-    print(text)
     return text
 
 
