@@ -32,19 +32,51 @@ canvas.create_text(40, 280, text="Hand cards", font="Calibri 20", anchor="nw")
 
 # Create hand cards to UI
 # The table cards can be used with these coordinates: (40, 120, 140, 260, fill='blue')
-def create_card_to_UI(mock_hand):
-    card = 0
+def create_card_to_UI(players):
+    player_hand = players[0].hand
+    player_table = players[0].table
+    canvas.delete("all")
+
+    t_card = 0
+    h_card = 0
+
+    shrink_factor = 1
+    if len(player_table) > 6:
+        shrink_factor = len(player_table)*120/700
+        print(shrink_factor)
+
+    for table_card in player_table:
+
+        t_start_x = 40 + t_card * 120 / shrink_factor
+        t_start_y = 120
+        t_end_x =  140 + t_card * 120 / shrink_factor
+        t_end_y = 260
+
+        rect_coords = t_start_x, t_start_y, t_end_x, t_end_y
+        cost_coords = t_start_x-5, t_start_y+5, t_start_x+5, t_start_y+15
+        text_coords = t_start_x+5, t_start_y+17
+
+        # Draw the rectangles to the canvas
+        canvas.create_rectangle(rect_coords, fill="white")
+
+        # Add card cost and name to cards
+        create_icons_for_cost(table_card.cost, cost_coords)
+
+        # canvas.create_text(cost_coords, text=hand_card.cost, font="Arial 9", anchor="nw")
+        input_text = align_text_and_row(table_card.name)
+        canvas.create_text(text_coords, text=input_text, font="Arial 9", anchor="nw")
+        t_card += 1
 
     # Reveal the cards in the player's hand
-    for hand_card in mock_hand:
-        start_x = 40 + card * 120
-        start_y = 320
-        end_x =  140 + card * 120
-        end_y = 460
+    for hand_card in player_hand:
+        h_start_x = 40 + h_card * 120
+        h_start_y = 320
+        h_end_x =  140 + h_card * 120
+        h_end_y = 460
 
-        rect_coords = start_x, start_y, end_x, end_y
-        cost_coords = start_x-5, start_y+5, start_x+5, start_y+15
-        text_coords = start_x+5, start_y+17
+        rect_coords = h_start_x, h_start_y, h_end_x, h_end_y
+        cost_coords = h_start_x-5, h_start_y+5, h_start_x+5, h_start_y+15
+        text_coords = h_start_x+5, h_start_y+17
 
         # Draw the rectangles to the canvas
         canvas.create_rectangle(rect_coords, fill="white")
@@ -55,12 +87,14 @@ def create_card_to_UI(mock_hand):
         # canvas.create_text(cost_coords, text=hand_card.cost, font="Arial 9", anchor="nw")
         input_text = align_text_and_row(hand_card.name)
         canvas.create_text(text_coords, text=input_text, font="Arial 9", anchor="nw")
-        card += 1
-    
+        h_card += 1
+        # Reveal the cards in the player's hand
+
+
     # Create an image for the deck
     for x in range(5):
-        canvas.create_rectangle(start_x + 140 + 3*x, start_y + 3*x, end_x + 140 + 3*x, end_y + 3*x, fill="light blue")
-    canvas.create_text(start_x + 154, start_y+14, text="Draw deck", font="Arial 9", anchor="nw")
+        canvas.create_rectangle(h_start_x + 140 + 3*x, h_start_y + 3*x, h_end_x + 140 + 3*x, h_end_y + 3*x, fill="light blue")
+    canvas.create_text(h_start_x + 154, h_start_y+14, text="Draw deck", font="Arial 9", anchor="nw")
 
 
 def create_icons_for_cost(cost, coords):
@@ -84,11 +118,12 @@ def align_text_and_row(text, front_text = ""):
 
 players = setup_mock_game()
 
-create_card_to_UI(mock_hand)
+create_card_to_UI(players)
 
 def time_print():
     print("Timer tick")
     game(players)
+    create_card_to_UI(players)
     root.after(1000, time_print)
 
 # Run UI
