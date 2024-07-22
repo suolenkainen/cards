@@ -30,7 +30,7 @@ class player_object():
         self.manapool = []
         self.strategy = None
         self.graveyard = []
-        self.health = 10
+        self.health = 100
         self.hand_size = 5
         self.next_draw_amount = 5
         self.actions = []
