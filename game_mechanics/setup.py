@@ -33,6 +33,7 @@ class player_object():
         self.health = 10
         self.hand_size = 5
         self.next_draw_amount = 5
+        self.actions = []
 
     def create_deck(self):
         self.draw_deck = create_draw_deck()

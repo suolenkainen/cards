@@ -20,8 +20,14 @@ root = Tk()
 root.title("Cardgame")
 canvas = Canvas(root)
 
+# Dimensions
+card_size = 100, 140
+left_buffer = 40
+table_card_row = 120
+hand_card_row = 320
+
 # canvas = Canvas(width=440, height= 500)
-canvas = Canvas(width=800, height= 500)
+canvas = Canvas(width=8 * card_size[0], height= 4 * card_size[1])
 canvas.pack()
 
 # Set fonts
@@ -34,11 +40,6 @@ header_font = text_font + header_font_size
 subheader_font = text_font + subheader_font_size
 card_text_font = text_font + card_font_size
 
-# Dimensions
-card_size = 100, 140
-left_buffer = 40
-table_card_row = 120
-hand_card_row = 320
 
 # Create hand cards to UI
 # The table cards can be used with these coordinates: (40, 120, 140, 260, fill='blue')
@@ -53,12 +54,13 @@ def create_card_to_UI(players):
     shrink_factor = 1
     if len(player_table) > 6:
         shrink_factor = len(player_table)* (card_size[0] +20) / 700
-        print(shrink_factor)
 
     # Draw titles to canvas
-    canvas.create_text(40, 20, text="Player 1", font=header_font, anchor="nw")
-    canvas.create_text(40, 80, text="Table cards", font="Calibri 20", anchor="nw")
-    canvas.create_text(40, 280, text="Hand cards", font="Calibri 20", anchor="nw")
+    canvas.create_text(left_buffer, 20, text=players[0].name, font=header_font, anchor="nw")
+    canvas.create_text(left_buffer, 80, text="Table cards", font=subheader_font, anchor="nw")
+    canvas.create_text(left_buffer, 280, text="Hand cards", font=subheader_font, anchor="nw")
+    canvas.create_text(left_buffer, 500, text="Health: " + str(players[0].health), font=card_text_font, anchor="nw")
+    canvas.create_text(left_buffer + 100, 500, text="Hand size: " + str(players[0].hand_size), font=card_text_font, anchor="nw")
 
     for i, table_card in enumerate(player_table):
 
@@ -68,27 +70,27 @@ def create_card_to_UI(players):
         t_start_y = table_card_row
         t_end_y = t_start_y + card_size[1]
 
-        rect_coords = t_start_x, t_start_y, t_end_x, t_end_y
-        cost_coords = t_start_x-5, t_start_y+5, t_start_x+5, t_start_y+15
-        text_coords = t_start_x+5, t_start_y+17
-
         # Draw the rectangles to the canvas
-        canvas.create_rectangle(rect_coords, fill="white")
+        rect_coords = t_start_x, t_start_y, t_end_x, t_end_y
+        if table_card.color == "colourless":
+            table_card.color = "grey"
+        canvas.create_rectangle(rect_coords, fill="white", outline=table_card.color, width=3)
 
         # Add card cost and name to cards
+        cost_coords = t_start_x-5, t_start_y+5, t_start_x+5, t_start_y+15
         create_icons_for_cost(table_card.cost, cost_coords)
-
-        # canvas.create_text(cost_coords, text=hand_card.cost, font="Arial 9", anchor="nw")
+        
+        text_coords = t_start_x+5, t_start_y+17
         card_name = align_text_and_row(table_card.name)
-        canvas.create_text(text_coords, text=card_name, font="Arial 9", anchor="nw")
+        canvas.create_text(text_coords, text=card_name, font=card_text_font, anchor="nw")
 
         # Add card combat score, if any
-        if table_card.type != "mana":
+        if table_card.type not in ["mana","enchantment"]:
             combat_coords = t_start_x+95, t_start_y+115
             if not table_card.attack: table_card.attack = 0
             if not table_card.defence: table_card.defence = 0
             combat_text = str(table_card.attack) + " / " + str(table_card.defence)
-            canvas.create_text(combat_coords, text=combat_text, font="Arial 9", anchor="ne")
+            canvas.create_text(combat_coords, text=combat_text, font=card_text_font, anchor="ne")
 
 
     # Reveal the cards in the player's hand
@@ -100,31 +102,34 @@ def create_card_to_UI(players):
         h_start_y = hand_card_row
         h_end_y = h_start_y + card_size[1]
 
-        rect_coords = h_start_x, h_start_y, h_end_x, h_end_y
-        cost_coords = h_start_x-5, h_start_y+5, h_start_x+5, h_start_y+15
-        text_coords = h_start_x+5, h_start_y+17
 
         # Draw the rectangles to the canvas
-        canvas.create_rectangle(rect_coords, fill="white")
+        rect_coords = h_start_x, h_start_y, h_end_x, h_end_y
+        if hand_card.color == "colourless":
+            hand_card.color = "grey"
+        canvas.create_rectangle(rect_coords, fill="white", outline=hand_card.color, width=3)
 
         # Add card cost and name to cards, and attack & defence
+        cost_coords = h_start_x-5, h_start_y+5, h_start_x+5, h_start_y+15
         create_icons_for_cost(hand_card.cost, cost_coords)
+
+        text_coords = h_start_x+5, h_start_y+17
         card_name = align_text_and_row(hand_card.name)
-        canvas.create_text(text_coords, text=card_name, font="Arial 9", anchor="nw")
+        canvas.create_text(text_coords, text=card_name, font=card_text_font, anchor="nw")
 
         # Add card combat score, if any
-        if hand_card.type != "mana":
+        if hand_card.type not in ["mana","enchantment"]:
             combat_coords = h_start_x+95, h_start_y+115
             if not hand_card.attack: hand_card.attack = 0
             if not hand_card.defence: hand_card.defence = 0
             combat_text = str(hand_card.attack) + " / " + str(hand_card.defence)
-            canvas.create_text(combat_coords, text=combat_text, font="Arial 9", anchor="ne")
+            canvas.create_text(combat_coords, text=combat_text, font=card_text_font, anchor="ne")
 
 
     # Create an image for the deck
     for x in range(5):
         canvas.create_rectangle(h_start_x + 140 + 3*x, h_start_y + 3*x, h_end_x + 140 + 3*x, h_end_y + 3*x, fill="light blue")
-    canvas.create_text(h_start_x + 154, h_start_y+14, text="Draw deck", font="Arial 9", anchor="nw")
+    canvas.create_text(h_start_x + 154, h_start_y+14, text="Draw deck", font=card_text_font, anchor="nw")
     
 
 
@@ -140,7 +145,7 @@ def create_icons_for_cost(cost, coords):
 
 def align_text_and_row(text, front_text = ""):
     max_width = 90
-    text_object = font.Font(family="Arial", size=9)
+    text_object = font.Font(family=text_font, size=9)
     width_in_pixels = text_object.measure(text)
     if width_in_pixels > max_width:
         text = text.replace(" ", "\n")
@@ -152,9 +157,11 @@ players = setup_mock_game()
 create_card_to_UI(players)
 
 def time_print():
-    print("Timer tick")
     game(players)
     create_card_to_UI(players)
+    if players[0].health <= 0 or players[1].health <= 0:
+        print("END")
+        return
     root.after(1000, time_print)
 
 # Run UI

@@ -5,6 +5,7 @@ The tkinker calls this function every few seconds to run the game.
 import setup
 import phases
 import copy
+import random
 
 def setup_mock_game():
     # Create players
@@ -13,6 +14,8 @@ def setup_mock_game():
         player = setup.player_object()
         player.id = i
         player.name = "player "+str(i)
+        random.seed(player.id)
+        random.shuffle(player.draw_deck.cards)
         player.hand = setup.draw_start_hand(player.draw_deck)
         players.append(player)
     
@@ -41,14 +44,15 @@ def turn_order(players):
 
 def game(players):
     player = players[0]
-    opponent = players[1]
     
     # Player phases
     phases.untap_phase(player)
 
     phases.sort_hand(player)
 
-    play_cards(player, opponent)
+    play_cards(players)
+
+    phases.action(players)
 
     phases.discard_phase(player)
 
@@ -57,9 +61,9 @@ def game(players):
     return turn_order(players)
      
 
-def play_cards(player, opponent):
+def play_cards(players):
+    player = players[0]
     has_played_mana = False
-    remove_cards = []
     
     temp_hand = copy.copy(player.hand)
     for card in player.hand:
@@ -86,7 +90,13 @@ def play_cards(player, opponent):
                 temp_cost.pop(0)
             else:
                 break
+
         if temp_cost == []:
+            if card.type == "enchantment" and phases.enchantment_validity(players):
+                temp_hand.remove(card)
+                player.manapool = temp_pool
+                print("Plays enchantment", card.name)
+                continue
             card.tapped = True
             player.table.append(card)
             temp_hand.remove(card)

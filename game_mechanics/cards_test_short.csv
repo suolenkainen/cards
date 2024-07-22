@@ -12,7 +12,7 @@
 11;Blue Monster id-11;Blue;Monster;Blue,Monster,,,,Common,Bull Rush (red),,,;Common;;Blue,Blue,Any,,,,,,;2;1;Bull Rush (red),,,;Bull Rush (red);;;
 12;Blue Monster id-12;Blue;Monster;Blue,Monster,,,,Common,First strike,,,;Common;;Blue,Any,Any,,,,,,;2;2;First strike,,,;First strike;;;
 13;Counterspell;Blue;Enchantment;Blue,Enchantment,Interrupt,,,Common,Tempo,,,;Common;;Blue,Any,Any,,,,,,;;;Tempo,,,;Tempo;;;
-14;Coiled Wurm;Green;Monster;Green,Monster,Beast,,,Common,First strike,,,;Common;;Green,Any,,,,,,,;1;1;First strike,,,;First strike;;;
+14;Coiled Wurm;Green;Monster;Green,Monster,Beast,Blocker,,Common,First strike,,,;Common;;Green,Any,,,,,,,;1;1;First strike,,,;First strike;;;
 15;Delicate Power;Green;Enchantment;Green,Enchantment,Deck,,,Uncommon,Draw 3, discard 1,Tap 2,,;Uncommon;;Green,Green,Any,Any,,,,,;;;Draw 3, discard 1,Tap 2,,;Draw 3, discard 1;Tap 2;;
 16;Drain;Green;Enchantment;Green,Enchantment,Interrupt,,,Uncommon,Pillage,Draw card,,;Uncommon;;Green,Any,Any,Any,,,,,;;;Pillage,Draw card,,;Pillage;Draw card;;
 17;Enchanting Song;Green;Enchantment;Green,Enchantment,Boon,Block,,Common,Restrict block 3,,,;Common;;Green,Any,Any,,,,,,;;;Restrict block 3,,,;Restrict block 3;;;
