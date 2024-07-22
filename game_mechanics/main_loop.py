@@ -87,17 +87,6 @@ def play_cards(player, opponent):
             else:
                 break
         if temp_cost == []:
-            
-            # if card.type == "enchantment":
-            #     for ability, parameters in card.abilities:
-            #         result = globals()[ability](opponent, player, parameters)
-            #         if result:
-            #             player.cards[i]["status"] = "graveyard"
-            #             player.graveyard.insert(i, 0)
-            #             temp_hand.remove(i)
-            #     # player.cards[i]["status"] = "table untapped"
-            #     continue
-            # else:
             card.tapped = True
             player.table.append(card)
             temp_hand.remove(card)
