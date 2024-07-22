@@ -2,6 +2,7 @@
 This describes the different phases in game
 """
 
+import abilities as ab
 
 def untap_phase(player):
     print(player.name)
@@ -45,6 +46,8 @@ def action(players):
     player = players[0]
     # scroll through the actions list and check for any possible actions
     for card in player.actions:
+        if card.abilities:
+            ab.call_abilities(card, players)
         if card.type == "monster":
             attack(card, players)
             player.actions.remove(card)

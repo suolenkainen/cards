@@ -162,7 +162,7 @@ def time_print():
     if players[0].health <= 0 or players[1].health <= 0:
         print("END")
         return
-    root.after(1000, time_print)
+    root.after(100, time_print)
 
 # Run UI
 

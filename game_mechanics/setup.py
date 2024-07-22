@@ -77,7 +77,7 @@ class card_object():
         self.cost = self.parsed_data["cost"]
         self.attack = self.parsed_data["att"]
         self.defence = self.parsed_data["def"]
-        self.abilities = self.parsed_data["ability"]
+        self.abilities = self.parsed_data["abilities"]
         self.tapped = None
         self.priority = 0
 
@@ -88,6 +88,7 @@ class card_object():
         # Parse data from csv
         # Will be updated as the data becomes more refined
         self.parsed_data = {}
+        abilities = []
         for key, value in data.items():
             if key != "":
                 key = key.lower().rstrip(',')                
@@ -96,6 +97,9 @@ class card_object():
                 if len(value) == 1: value = value[0]
                 if not value: value = None
                 self.parsed_data[key] = value
+            if key[:-1] == "ability" and value:
+                abilities.append((value))
+        self.parsed_data["abilities"] = abilities
 
 
 
