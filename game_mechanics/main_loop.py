@@ -2,10 +2,8 @@
 The tkinker calls this function every few seconds to run the game.
 """
 
-import setup
-import phases
-import copy
-import random
+import setup, phases, copy, random
+import abilities as ab
 
 def setup_mock_game():
     # Create players
@@ -52,6 +50,7 @@ def turn_order(players):
     return players
 
 
+
 def game(players):
     player = players[0]
     
@@ -70,6 +69,7 @@ def game(players):
 
     return turn_order(players)
      
+
 
 def play_cards(players):
     player = players[0]
@@ -103,14 +103,18 @@ def play_cards(players):
 
         if temp_cost == []:
             if card.type == "enchantment" and phases.enchantment_validity(players):
-                if opponent_interrupt():
-                    pass
+
+                # Check if there is an interrupt to be played by the opponent
+                interrupt, cancel = opponent_interrupt(players, card)
+                if interrupt:
+                    if cancel:
+                        continue
                 temp_hand.remove(card)
                 player.manapool = temp_pool
                 print("Plays enchantment", card.name)
                 continue
             
-            if opponent_interrupt():
+            if opponent_interrupt(players, card):
                 pass
             card.tapped = True
             player.table.append(card)
@@ -120,10 +124,22 @@ def play_cards(players):
     player.hand = temp_hand
 
 
-def opponent_interrupt():
-    return False
 
+def opponent_interrupt(players, card, **kwargs):
+    # receive opponent card that was played
 
+    ## Create counter ability first
+    interrupt_card = any("interrupt" in card.keywords for card in players[1].hand)
+    if any("interrupt" in card.keywords for card in players[1].hand):
+        ab.call_abilities(card, players, interrupt=interrupt_card)
+        print("JIIHAA")
+    
+        cancel_play()
+
+    return False, False
+
+def cancel_play():
+    pass
 
 if __name__ == "__main__":
     setup_mock_game()
