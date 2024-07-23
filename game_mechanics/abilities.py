@@ -31,12 +31,16 @@ def untap(players, parameters):
         return False
     
     # Sort cards based on the
-    target_cards = sorted(target_cards, key=create_key_function(parameters["sort"]))
+    target_cards = sorted(target_cards, reverse=True, key=create_key_function(parameters["sort"]))
 
     # Untap target card(s)
     if "amount" not in parameters:
         parameters["amount"] = 1
-    for i in range(parameters["amount"]):
+    amount = copy(parameters["amount"])
+    if "upto" in parameters:
+        if len(target_cards) < parameters["amount"]:
+            amount = len(target_cards)
+    for i in range(amount):
         target_cards[i].tapped = False
 
     return True

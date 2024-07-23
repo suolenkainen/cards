@@ -103,16 +103,26 @@ def play_cards(players):
 
         if temp_cost == []:
             if card.type == "enchantment" and phases.enchantment_validity(players):
+                if opponent_interrupt():
+                    pass
                 temp_hand.remove(card)
                 player.manapool = temp_pool
                 print("Plays enchantment", card.name)
                 continue
+            
+            if opponent_interrupt():
+                pass
             card.tapped = True
             player.table.append(card)
             temp_hand.remove(card)
             player.manapool = temp_pool
             print("Plays card", card.name)
     player.hand = temp_hand
+
+
+def opponent_interrupt():
+    return False
+
 
 
 if __name__ == "__main__":
