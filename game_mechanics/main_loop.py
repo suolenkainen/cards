@@ -129,9 +129,14 @@ def opponent_interrupt(players, card, **kwargs):
     # receive opponent card that was played
 
     ## Create counter ability first
-    interrupt_card = any("interrupt" in card.keywords for card in players[1].hand)
     if any("interrupt" in card.keywords for card in players[1].hand):
-        ab.call_abilities(card, players, interrupt=interrupt_card)
+        for interrupt_card in players[1].hand:
+            if "interrupt" in interrupt_card.keywords:
+                break
+        
+        # UGLY IMPLEMENTATION
+        ab.call_abilities(interrupt_card, players, played_card=card, interrupt_card=interrupt_card)
+        #remove played interrupt
         print("JIIHAA")
     
         cancel_play()

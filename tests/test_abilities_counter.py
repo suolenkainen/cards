@@ -12,6 +12,7 @@ def test_no_matching_cards():
     mock_opponent = mock_class(1)
     mock_card_counter = mock_class(2)
     mock_card_ = mock_class(2)
+    mock_parameters = {'target': 'player', 'keywords': ['blue']}
     
     #set up a test
     mock_player.hand = []
@@ -21,9 +22,9 @@ def test_no_matching_cards():
     
     mock_players = [mock_player, mock_opponent]
 
-    result = counter(mock_players, parameters)
+    result = counter(mock_players, mock_parameters, mock_card_counter)
 
-    #assert
+    # assert
     assert result == True
 
 

@@ -48,13 +48,23 @@ def untap(players, parameters, **kwargs):
 
 def counter(players, parameters, **kwargs):
     # target
-    print(kwargs)
-    counterspell = ("counter" in card.keywords for card in players[1].hand)
+    variables = kwargs["variables"]
+    target_card = variables["played_card"]
+    interrupt_card = variables["interrupt_card"]
 
-    # opponent card to be played
-    # target:opponent
-    # check keywords
-    # keywords:monster&uncommon
+    for keyword in parameters["keywords"]:
+        if keyword not in target_card.keywords:
+            return False
+    
+    players[0].hand(target_card)
+    players[0].graveyard.append(target_card)
+
+    players[1].hand(interrupt_card)
+    players[1].graveyard.append(interrupt_card)
+
+    return True
+
+
 
     #set the card as played
     print(parameters)
