@@ -16,7 +16,17 @@ def setup_mock_game():
         player.name = "player "+str(i)
         random.seed(player.id)
         random.shuffle(player.draw_deck.cards)
-        player.hand = setup.draw_start_hand(player.draw_deck)
+        zero_mana = True
+        while zero_mana:
+            player.hand = setup.draw_start_hand(player.draw_deck)
+            for card in player.hand:
+                if card.type == "mana":
+                    zero_mana = False
+                    break
+            if zero_mana:
+                for i in range(5):
+                    player.graveyard.append(player.hand.pop(0))
+
         players.append(player)
     
     players.append(0)

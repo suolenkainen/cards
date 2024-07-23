@@ -62,6 +62,8 @@ def create_card_to_UI(players):
     canvas.create_text(left_buffer, 500, text="Health: " + str(players[0].health), font=card_text_font, anchor="nw")
     canvas.create_text(left_buffer + 100, 500, text="Hand size: " + str(players[0].hand_size), font=card_text_font, anchor="nw")
 
+
+
     for i, table_card in enumerate(player_table):
 
         # Set sizes and coordinations for elements
@@ -74,7 +76,22 @@ def create_card_to_UI(players):
         rect_coords = t_start_x, t_start_y, t_end_x, t_end_y
         if table_card.color == "colourless":
             table_card.color = "grey"
-        canvas.create_rectangle(rect_coords, fill="white", outline=table_card.color, width=3)
+        
+        width = 3
+        if table_card.type == "mana":
+            width = 6
+
+        # Turn card 90 degrees if tapped
+        if table_card.tapped:
+            t_start_x = left_buffer-20 + i * (card_size[0] +20) / shrink_factor
+            t_end_x =  t_start_x+40 + card_size[0]
+            t_start_y = table_card_row+20
+            t_end_y = t_start_y + card_size[1]-40
+            rect_coords = t_start_x, t_start_y, t_end_x, t_end_y
+            canvas.create_rectangle(rect_coords, fill="light grey", outline="dark "+table_card.color, width=width)
+
+        else:
+            canvas.create_rectangle(rect_coords, fill="white", outline=table_card.color, width=width)
 
         # Add card cost and name to cards
         cost_coords = t_start_x-5, t_start_y+5, t_start_x+5, t_start_y+15
@@ -102,12 +119,15 @@ def create_card_to_UI(players):
         h_start_y = hand_card_row
         h_end_y = h_start_y + card_size[1]
 
+        width = 3
+        if hand_card.type == "mana":
+            width = 6
 
         # Draw the rectangles to the canvas
         rect_coords = h_start_x, h_start_y, h_end_x, h_end_y
         if hand_card.color == "colourless":
             hand_card.color = "grey"
-        canvas.create_rectangle(rect_coords, fill="white", outline=hand_card.color, width=3)
+        canvas.create_rectangle(rect_coords, fill="white", outline=hand_card.color, width=width)
 
         # Add card cost and name to cards, and attack & defence
         cost_coords = h_start_x-5, h_start_y+5, h_start_x+5, h_start_y+15
@@ -143,7 +163,8 @@ def create_icons_for_cost(cost, coords):
             canvas.create_oval(coords, fill=icon)
 
 
-def align_text_and_row(text, front_text = ""):
+
+def align_text_and_row(text):
     max_width = 90
     text_object = font.Font(family=text_font, size=9)
     width_in_pixels = text_object.measure(text)
@@ -165,8 +186,6 @@ def time_print():
     root.after(100, time_print)
 
 # Run UI
-
-
 time_print()
 root.mainloop()
 

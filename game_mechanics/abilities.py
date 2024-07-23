@@ -102,6 +102,10 @@ def defender(players, parameters):
     print(parameters)
 
 
+def blocker(players, parameters):
+    print(parameters)
+
+
 # Util function 
 def create_key_function(attrs: List[str]):
     return operator.attrgetter(*attrs)

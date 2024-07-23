@@ -63,10 +63,10 @@ def attack(monster, players):
     opponent = players[1]
 
     opponent_blockers = []
+    if "blocker" in monster.keywords:
+        return
     for opp_card in opponent.table:
         if opp_card.type == "monster":
-            if "blocker" in monster.keywords:
-                return
             if opp_card.tapped == False:
                 opponent_blockers.append(opp_card)
     if opponent_blockers == []:
@@ -80,17 +80,15 @@ def attack(monster, players):
         blocker = opponent_blockers.pop()
         blocker_HP = int(blocker.defence)
         blocker_HP -= int(monster.attack)
+        attacker_HP -= int(blocker.attack)
+        blocker.tapped = True
         if blocker_HP <= 0:
             opponent.graveyard.append(blocker)
             opponent.table.remove(blocker)
             if blocker in opponent.actions:
                 opponent.actions.remove(blocker)
-            monster.tapped = True
             print(monster.name, "attacked", blocker.name, "destroying it")
-            return
-        else:
-            attacker_HP -= int(blocker.attack)
-            print(monster.name, "was attacked by", blocker.name, "destroying it", "destroying it")
         if attacker_HP <= 0:
+            print(monster.name, "was blocked by", blocker.name, "and got destroyed")
             player.graveyard.append(monster)
             player.table.remove(monster)
