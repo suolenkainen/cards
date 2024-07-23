@@ -175,13 +175,18 @@ def align_text_and_row(text):
 
 players = setup_mock_game()
 
-create_card_to_UI(players)
+# create_card_to_UI(players)
 
 def time_print():
     game(players)
-    create_card_to_UI(players)
-    if players[0].health <= 0 or players[1].health <= 0:
-        print("END")
+    # create_card_to_UI(players)
+    if players[1].health <= 0 or len(players[1].draw_deck.cards) == 0:
+        print(players[0].name, "WINS!")
+        root.destroy()
+        return
+    if players[0].health <= 0 or len(players[0].draw_deck.cards) == 0:
+        print(players[1].name, "WINS!")
+        root.destroy()
         return
     root.after(100, time_print)
 

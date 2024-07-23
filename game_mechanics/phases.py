@@ -38,8 +38,11 @@ def discard_phase(player):
 
 def draw_cards(player):
     while player.next_draw_amount > 0 or len(player.hand) < player.hand_size:
-        player.hand.append(player.draw_deck.cards.pop(0))
-        player.next_draw_amount -= 1
+        if len(player.draw_deck.cards) >= 1:
+            player.hand.append(player.draw_deck.cards.pop(0))
+            player.next_draw_amount -= 1
+        else:
+            break
 
 
 def action(players):

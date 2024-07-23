@@ -116,6 +116,7 @@ def draw_start_hand(player_deck):
     hand = []
     for x in range(5):
         hand.append(player_deck.cards.pop(0))
+
     return hand
 
 
