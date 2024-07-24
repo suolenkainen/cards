@@ -56,11 +56,13 @@ def counter(players, parameters, **kwargs):
         if keyword not in target_card.keywords:
             return False
     
-    players[0].hand(target_card)
+    players[0].hand.remove(target_card)
     players[0].graveyard.append(target_card)
 
-    players[1].hand(interrupt_card)
+    players[1].hand.remove(interrupt_card)
     players[1].graveyard.append(interrupt_card)
+
+    print(players)
 
     return True
 
