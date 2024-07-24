@@ -1,5 +1,4 @@
 import pytest
-from game_mechanics.abilities import untap
 
 
 class mock_class():

@@ -5,7 +5,7 @@ This describes the different phases in game
 import abilities as ab
 
 def untap_phase(player):
-    print(player.name)
+    # print(player.name)
     player.manapool = []
     for card in player.table:
         if card.tapped:

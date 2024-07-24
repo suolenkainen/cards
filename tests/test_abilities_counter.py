@@ -90,9 +90,6 @@ def test_counter_works_two_on_three_parameter():
     # assert
     assert result == True
 
-def test_matching():
-    pass
-
 
 if __name__ == "__main__":
     pytest.main([__file__])
