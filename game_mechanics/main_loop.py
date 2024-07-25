@@ -27,26 +27,6 @@ def setup_mock_game():
 
         players.append(player)
     
-    players.append(0)
-    players.append(1)
-
-    return players
-
-
-def turn_order(players):
-    # Identify, who is the player and who is opponent
-    player = players[0]
-    opponent = players[1]
-
-    # Switch order. After player 1 has played, turn counter rises by one.
-    if players[2] == 0:
-        players[2] == 1
-    else: 
-        players[2] = 0
-        players[3] += 1
-    players[0] = opponent
-    players[1] = player
-
     return players
 
 
@@ -67,7 +47,9 @@ def game(players):
 
     phases.draw_cards(player)
 
-    return turn_order(players)
+    # Switch order. After player 1 has played, turn counter rises by one.
+    players.append(players.pop(0))
+
      
 
 
