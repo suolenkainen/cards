@@ -1,11 +1,7 @@
-"""
-This describes the different phases in game
-"""
-
-import abilities as ab
+from abilities import call_abilities
 
 def untap_phase(player):
-    # print(player.name)
+    print(player.name)
     player.manapool = []
     for card in player.table:
         if card.tapped:
@@ -14,6 +10,7 @@ def untap_phase(player):
                 player.actions.append(card)
         if not card.tapped and card.type == "mana":
             player.manapool.append(card.color)
+
 
 
 def sort_hand(player):
@@ -30,10 +27,12 @@ def sort_hand(player):
             break
 
 
+
 def discard_phase(player):
     while len(player.hand) >= player.hand_size:
         player.graveyard.append(player.hand.pop())
     player.next_draw_amount = 1
+
 
 
 def draw_cards(player):
@@ -45,20 +44,28 @@ def draw_cards(player):
             break
 
 
+
 def action(players):
+    # Check if the player has action pending and go through them 
     player = players[0]
-    # scroll through the actions list and check for any possible actions
+
     for card in player.actions:
         if card.abilities:
-            ab.call_abilities(card, players)
+            # Check and play all abilities the action might have
+            call_abilities(card, players)
         if card.type == "monster":
+            # Check and play all attacks a monster might have
             attack(card, players)
-            player.actions.remove(card)
+
+    # Remove cards that have performed an action
+    player.actions = []
+
 
 
 def enchantment_validity(players):
     # Todo: When attack is OK, make this
     return True
+
 
 
 def attack(monster, players):

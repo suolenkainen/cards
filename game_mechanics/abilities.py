@@ -2,6 +2,8 @@ import operator
 from copy import copy
 from typing import List
 
+
+
 def call_abilities(card, players, **kwargs):
     for ability in card.abilities:
         parameter_list = ability[1:]
@@ -12,6 +14,7 @@ def call_abilities(card, players, **kwargs):
             parameters[key] = value
         print(ability)
         return globals()[ability[0]](players, parameters, variables=kwargs)
+
 
 
 def untap(players, parameters, **kwargs):
@@ -46,6 +49,7 @@ def untap(players, parameters, **kwargs):
     return True
 
 
+
 def counter(players, parameters, **kwargs):
     # target
     variables = kwargs["variables"]
@@ -62,84 +66,96 @@ def counter(players, parameters, **kwargs):
     players[1].hand.remove(interrupt_card)
     players[1].graveyard.append(interrupt_card)
 
-    print(players)
-
     return True
 
 
 
-    #set the card as played
-    print(parameters)
-
-
 def draw_card(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 def first_strike(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def pounce(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def trample(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def psychic(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def enchant_creature(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def control(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def psychic_blast(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def front_line(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def bull_rush(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def ranged(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def sunder(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def shatter(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def charge(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def ready(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def defender(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def blocker(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
 def tap(players, parameters, **kwargs):
+    # Don't remove card if not an instant
     print(parameters)
 
 
