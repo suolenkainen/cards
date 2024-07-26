@@ -68,7 +68,7 @@ class card_object():
         self.parse(data)
 
         # Add values to attributes
-        self.id = int(self.parsed_data["#"])
+        self.id = self.parsed_data["#"]
         self.name = self.parsed_data["name"]
         self.color = self.parsed_data["color"]
         self.type = self.parsed_data["type"]
