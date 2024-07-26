@@ -1,20 +1,15 @@
 import pytest
+from unittest.mock import Mock
 from game_mechanics.abilities import counter
-
-
-class mock_class():
-    def __init__(self, i) -> None:
-        pass
 
 
 
 def test_counter_doesnt_work():
-
     # Set up test
-    mock_player = mock_class(0)
-    mock_opponent = mock_class(1)
-    mock_to_be_countered = mock_class(2)
-    mock_counter_card_ = mock_class(2)
+    mock_player = Mock()
+    mock_opponent = Mock()
+    mock_to_be_countered = Mock()
+    mock_counter_card_ = Mock()
     mock_counter_parameters = {'keywords': ['blue']}
     
     mock_player.hand = []
@@ -37,12 +32,11 @@ def test_counter_doesnt_work():
 
 
 def test_counter_works_one_on_one_parameter():
-
     # Set up test
-    mock_player = mock_class(0)
-    mock_opponent = mock_class(1)
-    mock_to_be_countered = mock_class(2)
-    mock_counter_card_ = mock_class(2)
+    mock_player = Mock()
+    mock_opponent = Mock()
+    mock_to_be_countered = Mock()
+    mock_counter_card_ = Mock()
     mock_counter_parameters = {'keywords': ['blue']}
     
     mock_player.hand = []
@@ -65,12 +59,11 @@ def test_counter_works_one_on_one_parameter():
 
 
 def test_counter_works_two_on_three_parameter():
-
     # Set up test
-    mock_player = mock_class(0)
-    mock_opponent = mock_class(1)
-    mock_to_be_countered = mock_class(2)
-    mock_counter_card_ = mock_class(2)
+    mock_player = Mock()
+    mock_opponent = Mock()
+    mock_to_be_countered = Mock()
+    mock_counter_card_ = Mock()
     mock_counter_parameters = {'keywords': ['blue', 'monster']}
     
     mock_player.hand = []
@@ -89,6 +82,7 @@ def test_counter_works_two_on_three_parameter():
 
     # assert
     assert result == True
+
 
 
 if __name__ == "__main__":

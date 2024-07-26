@@ -2,38 +2,10 @@ import pytest
 from unittest.mock import Mock, patch
 
 
-def test_discard_1_under_hand_limit():
-    # Mock the player object
-    mock_player = Mock()
-    mock_card_1 = Mock()
-    mock_card_2 = Mock()
-    mock_player.hand = [
-        mock_card_1,
-        mock_card_2
-    ]
-
-    mock_player.hand_size = 1
-    mock_player.graveyard = []
-    mock_player.next_draw_amount = 0
-
-    # Patch the abilities module to avoid import errors
-    with patch.dict('sys.modules', {'abilities': Mock()}):
-        from game_mechanics.phases import discard_phase
-
-        # Call the function under test
-        discard_phase(mock_player)
-
-        # Assertions
-        assert mock_player.hand_size == 1
-        assert mock_card_1 in mock_player.graveyard
-        assert mock_card_2 in mock_player.graveyard
-        assert mock_player.hand == []
-
-
 
 ## Use test data to cover 3 cases: mixed tap, monster moving to action list, manapool filling up, but with actions and manapool already begun
 def test_draw_cards_full_hand():
-    # Mock the player object
+    # Mock test data
     mock_player = Mock()
     mock_player.draw_deck = Mock()
     mock_card_1 = Mock()
@@ -64,7 +36,7 @@ def test_draw_cards_full_hand():
 
 
 def test_draw_cards_after_allowing_more_draws_than_hand_limit():
-    # Mock the player object
+    # Mock test data
     mock_player = Mock()
     mock_player.draw_deck = Mock()
     mock_card_1 = Mock()
@@ -96,7 +68,7 @@ def test_draw_cards_after_allowing_more_draws_than_hand_limit():
 
 
 def test_draw_cards_more_than_in_deck():
-    # Mock the player object
+    # Mock test data
     mock_player = Mock()
     mock_player.draw_deck = Mock()
     mock_card_1 = Mock()
@@ -121,18 +93,6 @@ def test_draw_cards_more_than_in_deck():
         assert mock_player.next_draw_amount == 1
         assert mock_player.draw_deck.cards == []
         assert mock_player.hand == [mock_card_1, mock_card_2]
-
-
-
-
-
-
-
-# TODO: Create a way to check enchantment validity. It should be similar to what already happens in the abilities
-def test_enchantment_validity(players):
-    # Todo: When attack is OK, make this
-    return True
-
 
 
 

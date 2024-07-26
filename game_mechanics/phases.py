@@ -86,7 +86,8 @@ def attack(monster, players):
         return
     
     attacker_HP = int(monster.defence)
-    while opponent_blockers != [] or attacker_HP <= 0:
+    monster.tapped = True
+    while opponent_blockers != [] and attacker_HP > 0:
         blocker = opponent_blockers.pop()
         blocker_HP = int(blocker.defence)
         blocker_HP -= int(monster.attack)
