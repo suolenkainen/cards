@@ -6,7 +6,7 @@ To chose the source of data, uncomment which ever file is needed
 """
 
 from csv import DictReader
-import random
+import random, re
 
 
 # with open('C:\\Users\\pmarj\\OneDrive\\Documents\\Cards\\cards\\game_mechanics\\cards.csv', 'r') as file:
@@ -96,11 +96,19 @@ class card_object():
                 value = list(filter(None, value.split(',')))
                 if len(value) == 1: value = value[0]
                 if not value: value = None
+                value = self.check_if_integer(value)
                 self.parsed_data[key] = value
             if key[:-1] == "ability" and value:
                 abilities.append((value))
         self.parsed_data["abilities"] = abilities
 
+    def check_if_integer(self, value):
+        if isinstance(value, list) or not value:
+            return value
+        integer_pattern = re.compile(r'^-?\d+$')
+        if bool(integer_pattern.match(value)):
+            value = int(value)
+        return value
 
 
 class deck_object():
