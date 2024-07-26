@@ -1,15 +1,12 @@
 import pytest
+from unittest.mock import Mock, patch
 
-
-class mock_class():
-    def __init__(self, i) -> None:
-        pass
 
 
 def test_name():
-    mock_player = mock_class(0)
-    mock_opponent = mock_class(1)
-    mock_card = mock_class(2)
+    mock_player = Mock()
+    mock_opponent = Mock()
+    mock_card = Mock()
     
     #set up a test
     mock_player.table = []

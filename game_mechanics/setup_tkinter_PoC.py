@@ -8,12 +8,12 @@ This also creates the UI for following card values in stock market.
 
 from tkinter import *
 from tkinter import font
-import setup as cards
+import setup
 from main_loop import setup_mock_game, game
 
 # Check that cards are present
-mock_deck = cards.create_draw_deck(1, "PoC")
-mock_hand = cards.draw_start_hand(mock_deck)
+mock_deck = setup.create_draw_deck(1, "PoC")
+mock_hand = setup.draw_start_hand(mock_deck)
 
 # Create window
 root = Tk()
@@ -179,7 +179,7 @@ players = setup_mock_game()
 
 def time_print():
     game(players)
-    # create_card_to_UI(players)
+    create_card_to_UI(players)
     if players[1].health <= 0 or len(players[1].draw_deck.cards) == 0:
         print(players[0].name, "WINS!")
         root.destroy()
@@ -188,7 +188,7 @@ def time_print():
         print(players[1].name, "WINS!")
         root.destroy()
         return
-    root.after(100, time_print)
+    root.after(1000, time_print)
 
 # Run UI
 time_print()
