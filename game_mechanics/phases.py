@@ -80,18 +80,18 @@ def attack(monster, players):
             if opp_card.tapped == False:
                 opponent_blockers.append(opp_card)
     if opponent_blockers == []:
-        opponent.health -= int(monster.attack)
+        opponent.health -= monster.attack
         print(monster.name, "attacked", opponent.name, "reducing its health to", opponent.health)
         monster.tapped = True
         return
     
-    attacker_HP = int(monster.defence)
+    attacker_HP = monster.defence
     monster.tapped = True
     while opponent_blockers != [] and attacker_HP > 0:
         blocker = opponent_blockers.pop()
-        blocker_HP = int(blocker.defence)
-        blocker_HP -= int(monster.attack)
-        attacker_HP -= int(blocker.attack)
+        blocker_HP = blocker.defence
+        blocker_HP -= monster.attack
+        attacker_HP -= blocker.attack
         blocker.tapped = True
         if blocker_HP <= 0:
             opponent.graveyard.append(blocker)
