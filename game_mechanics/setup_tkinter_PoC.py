@@ -9,11 +9,16 @@ This also creates the UI for following card values in stock market.
 from tkinter import *
 from tkinter import font
 import setup
-from main_loop import setup_mock_game, game
+from main_loop import setup_mock_game, game, reset_game
+import csv
 
 # Check that cards are present
 mock_deck = setup.create_draw_deck(1, "PoC")
 mock_hand = setup.draw_start_hand(mock_deck)
+
+# Create a csv file of saving the statistics
+with open('test_record.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
 
 # Create window
 root = Tk()
@@ -178,20 +183,33 @@ players = setup_mock_game()
 # create_card_to_UI(players)
 
 def time_print():
+    games = 5
     game(players)
     create_card_to_UI(players)
+        
+    with open('test_record.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        data = [
+            [players[0].__dict__],
+            [players[1].__dict__]
+            ]
+        writer.writerows(data)
+
     if players[1].health <= 0 or len(players[1].draw_deck.cards) == 0:
         print(players[0].name, "WINS!")
-        root.destroy()
-        return
+        reset_game(players)
+        games -= 1
     if players[0].health <= 0 or len(players[0].draw_deck.cards) == 0:
         print(players[1].name, "WINS!")
+        reset_game(players)
+        games -= 1
+    if games == 0:
         root.destroy()
         return
-    root.after(1000, time_print)
+
+    root.after(200, time_print)
 
 # Run UI
 time_print()
 root.mainloop()
-
 

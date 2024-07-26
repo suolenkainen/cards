@@ -64,3 +64,6 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# csv file for testing
+test_record.csv

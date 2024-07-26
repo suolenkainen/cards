@@ -5,6 +5,39 @@ The tkinker calls this function every few seconds to run the game.
 import setup, phases, copy, random
 import abilities as ab
 
+def reset_game(players):
+    # Create players
+
+    for i in range(2):
+        player = players[i]
+        player.hand = []
+        player.table = []
+        player.manapool = []
+        player.strategy = None
+        player.graveyard = []
+        player.health = 100
+        player.hand_size = 5
+        player.next_draw_amount = 5
+        player.actions = []
+        player.draw_deck = None
+        player.draw_deck = setup.create_draw_deck()
+        player.draw_deck.id = 0
+        player.draw_deck.deck_owner = ""
+        player.draw_deck.deck_purpose = "draw deck"
+        random.seed(player.id)
+        random.shuffle(player.draw_deck.cards)
+        zero_mana = True
+        while zero_mana:
+            player.hand = setup.draw_start_hand(player.draw_deck)
+            for card in player.hand:
+                if card.type == "mana":
+                    zero_mana = False
+                    break
+            if zero_mana:
+                for i in range(5):
+                    player.graveyard.append(player.hand.pop(0))
+
+
 def setup_mock_game():
     # Create players
     players = []
