@@ -86,20 +86,48 @@ def attack(monster, players):
         return
     
     attacker_HP = monster.defence
-    monster.tapped = True
-    while opponent_blockers != [] and attacker_HP > 0:
+    while opponent_blockers != [] and monster.defence > 0:
+        # Set up combatants
         blocker = opponent_blockers.pop()
         blocker_HP = blocker.defence
-        blocker_HP -= monster.attack
-        attacker_HP -= blocker.attack
+
+        monster.tapped = True
         blocker.tapped = True
-        if blocker_HP <= 0:
+        blocker_dies = False
+        monster_dies = False
+        
+        # Check if there are "first strikes"
+        if "first_strike" in monster.keywords:
+            blocker_dies = wounding_opposing_monster(monster, blocker)
+        elif "first_strike" in blocker.keywords:
+            monster_dies = wounding_opposing_monster(blocker, monster)
+        else:
+            blocker_dies = wounding_opposing_monster(monster, blocker)
+            monster_dies = wounding_opposing_monster(blocker, monster)
+
+        # If combatants die, they are put to graveyard
+        if blocker_dies:
             opponent.graveyard.append(blocker)
             opponent.table.remove(blocker)
             if blocker in opponent.actions:
                 opponent.actions.remove(blocker)
             print(monster.name, "attacked", blocker.name, "destroying it")
-        if attacker_HP <= 0:
+
+        if monster_dies:
             print(monster.name, "was blocked by", blocker.name, "and got destroyed")
             player.graveyard.append(monster)
             player.table.remove(monster)
+
+        blocker.defence = blocker_HP
+
+    monster.defence = attacker_HP
+
+
+
+def wounding_opposing_monster(attacker, defender):
+    # Does the defender die?
+    defender.defence -= attacker.attack
+
+    if defender.defence <= 0:
+        return True
+    return False

@@ -197,6 +197,88 @@ def test_attacker_is_blocker():
 
 
 
+def test_attacker_has_first_strike():
+    # Mock test data
+    mock_attacking_monster = Mock()
+    mock_attacking_monster.keywords = ["first_strike"]
+    mock_attacking_monster.tapped = False
+    mock_attacking_monster.attack = 1
+    mock_attacking_monster.defence = 1
+
+    mock_blocking_monster = Mock()
+    mock_blocking_monster.type = "monster"
+    mock_blocking_monster.keywords = []
+    mock_blocking_monster.tapped = False
+    mock_blocking_monster.attack = 1
+    mock_blocking_monster.defence = 1
+
+    mock_opponent = Mock()
+    mock_opponent.health = 1
+    mock_opponent.actions = []
+    mock_opponent.graveyard = []
+    mock_player = Mock()
+    mock_player.graveyard = []
+    mock_opponent.table = [mock_blocking_monster]
+    mock_player.table = [mock_attacking_monster]
+            
+    mock_players = [mock_player, mock_opponent]
+
+    with patch.dict('sys.modules', {'abilities': Mock()}):
+        from game_mechanics.phases import attack
+        # Call the function under test and there should be no blocker
+        attack(mock_attacking_monster, mock_players)
+
+        #assert
+        assert mock_player.table == [mock_attacking_monster]
+        assert mock_attacking_monster.tapped == True
+        assert mock_player.graveyard == []
+        assert mock_opponent.table == []
+        assert mock_opponent.graveyard == [mock_blocking_monster]
+        assert mock_opponent.health == 1
+
+
+
+def test_blocker_has_first_strike():
+    # Mock test data
+    mock_attacking_monster = Mock()
+    mock_attacking_monster.keywords = []
+    mock_attacking_monster.tapped = False
+    mock_attacking_monster.attack = 1
+    mock_attacking_monster.defence = 1
+
+    mock_blocking_monster = Mock()
+    mock_blocking_monster.type = "monster"
+    mock_blocking_monster.keywords = ["first_strike"]
+    mock_blocking_monster.tapped = False
+    mock_blocking_monster.attack = 1
+    mock_blocking_monster.defence = 1
+
+    mock_opponent = Mock()
+    mock_opponent.health = 1
+    mock_opponent.actions = []
+    mock_opponent.graveyard = []
+    mock_player = Mock()
+    mock_player.graveyard = []
+    mock_opponent.table = [mock_blocking_monster]
+    mock_player.table = [mock_attacking_monster]
+            
+    mock_players = [mock_player, mock_opponent]
+
+    with patch.dict('sys.modules', {'abilities': Mock()}):
+        from game_mechanics.phases import attack
+        # Call the function under test and there should be no blocker
+        attack(mock_attacking_monster, mock_players)
+
+        #assert
+        assert mock_player.table == []
+        assert mock_player.graveyard == [mock_attacking_monster]
+        assert mock_opponent.table == [mock_blocking_monster]
+        assert mock_opponent.graveyard == []
+        assert mock_blocking_monster.tapped == True
+        assert mock_opponent.health == 1
+
+
+
 
 if __name__ == "__main__":
     pytest.main([__file__])

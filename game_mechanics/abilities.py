@@ -13,7 +13,7 @@ def call_abilities(card, players, **kwargs):
             value = value.split("&")
             parameters[key] = value
         print(ability)
-        return globals()[ability[0]](players, parameters, variables=kwargs)
+        return globals()[ability[0]](players, parameters, card=card, variables=kwargs)
 
 
 
@@ -70,11 +70,48 @@ def counter(players, parameters, **kwargs):
 
 
 
-def draw_card(players, parameters, **kwargs):
+def blocker(players, parameters, **kwargs):
     # Don't remove card if not an instant
     print(parameters)
 
 def first_strike(players, parameters, **kwargs):
+    # Check if the played card is a monster
+    played_card = kwargs["card"]
+    if played_card.type == "monster":
+        return False
+
+    # Set target to give an ability
+    action_target = players[0]
+    
+    # Identify cards in table and make sure the target doesn't have the ability already
+    target_cards = copy(action_target.table)
+    for keyword in parameters["keywords"]:
+        for card in action_target.table:
+            if keyword not in card.keywords or card.type == "monster":
+                if card in target_cards:
+                    target_cards.remove(card)
+    if target_cards == []:
+        return False
+    
+    # Sort cards based on the
+    target_cards = sorted(target_cards, reverse=True, key=create_key_function(parameters["sort"]))
+
+    # Add ability
+    if "amount" not in parameters:
+        parameters["amount"] = 1
+    amount = copy(parameters["amount"])
+    if "upto" in parameters:
+        if len(target_cards) < parameters["amount"]:
+            amount = len(target_cards)
+    for i in range(amount):
+        for ability in target_cards[i].abilities:
+            if ability[0] == "first strike":
+                amount += 1
+
+    return True
+
+
+def draw_card(players, parameters, **kwargs):
     # Don't remove card if not an instant
     print(parameters)
 
@@ -148,10 +185,6 @@ def defender(players, parameters, **kwargs):
     # Don't remove card if not an instant
     print(parameters)
 
-
-def blocker(players, parameters, **kwargs):
-    # Don't remove card if not an instant
-    print(parameters)
 
 
 def tap(players, parameters, **kwargs):
