@@ -1,0 +1,7 @@
+Test for phases.sort_hand
+Create Enchantment validity
+Create a more clear setup for a game
+    Create a four times deck
+        When other wins, the cards they use get a point (name of card, no mana)
+
+Ability to run games headless and multi-thread

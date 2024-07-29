@@ -98,7 +98,7 @@ def first_strike(players, parameters, **kwargs):
     if target_cards == []:
         return False
     
-    # Sort cards based on the
+    # Sort cards based on the "sort" parameter. If there are many attributes, it will go them in order
     target_cards = sorted(target_cards, reverse=True, key=create_key_function(parameters["sort"]))
 
     # Add ability
@@ -109,7 +109,7 @@ def first_strike(players, parameters, **kwargs):
         if len(target_cards) < parameters["amount"]:
             amount = len(target_cards)
     for i in range(amount):
-        target_cards[i].abilities.append(["first_strike", "target:self"])
+        target_cards[i].abilities.append(["first_strike", "target:self", "keywords:self", "priority:0"])
 
     return True
 

@@ -1,10 +1,10 @@
 #;Name;Color;Type;Keywords;Rarity;Cost;ATT;DEF;Ability1;Ability2;Ability3;Ability4
 1;Colourless Monster id-1;Colourless;Monster;Colourless,Monster,Character,,Legend,Mythic,,,,;Mythic;Any,Any,Any,Any,Any,Any,Any,,;4;4;;;;
-2;Blue Monster id-2;Blue;Monster;Blue,Monster,,,,Common,,,,;Common;Blue,,,,,,,,;1;1;First_Strike;;;
+2;Blue Monster id-2;Blue;Monster;Blue,Monster,,,,Common,,,,;Common;Blue,,,,,,,,;1;1;First_Strike,target:self,keywords:blue&monster,sort:priority;;;
 3;Blue Enchantment id-3;Blue;Enchantment;Blue,Enchantment,Boon,,,Common,Untap,,,;Common;Blue,,,,,,,,;;;;First_strike,target:player,keywords:blue&monster,sort:priority;;
 4;Blue Monster id-4;Blue;Monster;Blue,Monster,,,,Common,,,,;Common;Blue,Blue,,,,,,,;2;1;;;;
 5;Blue Monster id-5;Blue;Monster;Blue,Monster,,,,Common,Psychic_(Enchantments_don't_cause_damage),,,;Common;Blue,Any,,,,,,,;1;1;Psychic,target:player,keywords:blue&monster,sort:priority;;;
-6;Blue Enchantment id-6;Blue;Enchantment;Blue,Enchantment,Interrupt,,,Common,Enchant creature,,,;Common;Blue,Any,,,,,,,;;;Enchant_creature,target:player,keywords:blue&monster,sort:priority;First_Strike,keywords:monster,sort:priority;;
+6;Blue Enchantment id-6;Blue;Enchantment;Blue,Enchantment,Interrupt,,,Common,Enchant creature,,,;Common;Blue,Any,,,,,,,;;;Enchant_creature,target:player,keywords:blue&monster,sort:priority;First_Strike,target:player,keywords:monster&blue,sort:priority;;
 7;Blue Enchantment id-7;Blue;Enchantment;Blue,Enchantment,Boon,,,Common,Control,,,;Common;Blue,Any,,,,,,,;;;Control,target:player,keywords:blue&monster,sort:priority;;;
 8;Blue Monster id-8;Blue;Monster;Blue,Monster,,,,Common,(tap)_Psychic_Blast,Cover,,;Common;Blue,Blue,Any,,,,,,;2;1;Psychic_Blast,target:player,keywords:blue&monster,sort:priority;Cover,target:player,keywords:blue&monster,sort:priority;;
 9;Blue Monster id-9;Blue;Monster;Blue,Monster,Wall,,,Common,Front_line,Defender,,;Common;Blue,Blue,Any,,,,,,;4;0;Front_line,target:player,keywords:blue&monster,sort:priority;Defender,target:player,keywords:blue&monster,sort:priority;Untap,target:player,keywords:blue&monster,sort:priority;
@@ -12,15 +12,15 @@
 11;Blue Monster id-11;Blue;Monster;Blue,Monster,,,,Common,Bull_Rush_(red),,,;Common;Blue,Blue,Any,,,,,,;2;1;Bull_Rush,target:player,keywords:blue&monster,sort:priority;;;
 12;Blue Monster id-12;Blue;Monster;Blue,Monster,,,,Common,First_strike,,,;Common;Blue,Any,Any,,,,,,;2;2;;;;
 13;Counterspell;Blue;Enchantment;Blue,Enchantment,Interrupt,,,Common,Tempo,,,;Common;Blue,Any,Any,,,,,,;;;Counter,keywords:monster&uncommon;;;
-14;Coiled Wurm;Green;Monster;Green,Monster,Beast,Blocker,,Common,First_strike,,,;Common;Green,Any,,,,,,,;1;1;First_Strike,target:self;;;
+14;Coiled Wurm;Green;Monster;Green,Monster,Beast,Blocker,,Common,First_strike,,,;Common;Green,Any,,,,,,,;1;1;First_Strike,target:self,keywords:blue&monster,sort:priority;;;
 15;Delicate Power;Green;Enchantment;Green,Enchantment,Deck,,,Uncommon,Draw_3,_discard_1,Tap_2,,;Uncommon;Green,Green,Any,Any,,,,,;;;;;;
 16;Drain;Green;Enchantment;Green,Enchantment,Interrupt,,,Uncommon,Pillage,Draw_card,,;Uncommon;Green,Any,Any,Any,,,,,;;;First_Strike,target:player,keywords:blue&monster,sort:priority;;;
 17;Enchanting Song;Green;Enchantment;Green,Enchantment,Boon,Block,,Common,Restrict_block_3,,,;Common;Green,Any,Any,,,,,,;;;;;;
 18;Envoy of Harmony;Green;Monster;Green,Monster,Elf,,Diplomat,Common,Diplomat,Failed_diplomacy,,;Common;Green,Any,Any,,,,,,;1;1;Shatter,target:player,keywords:blue&monster,sort:priority;Failed_diplomacy,target:player,keywords:blue&monster,sort:priority;;
-19;Eternal Wisp;Green;Monster;Green,Monster,Spirit,,,Blocker,,,;Uncommon;Green,Green,Any,Any,,,,,;2;2;Blocker,target:self;;;
+19;Eternal Wisp;Green;Monster;Green,Monster,Spirit,,,Blocker,,,;Uncommon;Green,Green,Any,Any,,,,,;2;2;Blocker,target:self,keywords:blue&monster,sort:priority;;;
 20;Etheral Rangers;Green;Monster;Green,Monster,Elf,,Ranger,Common,Green_walk,Ranged,,;Common;Green,Any,,,,,,,;1;0;;Ranged,target:player,keywords:blue&monster,sort:priority;;
 21;Mana Bloom;Green;Enchantment;Green,Enchantment,Deck,,,Common,Search_green_mana,,,;Common;Green,Any,,,,,,,;;;First_Strike,target:player,keywords:blue&monster,sort:priority;;;
-22;Mirage Stag;Green;Monster;Green,Monster,Beast,,Stag,Rare,Trample,Charge,Ready,Blocker;Rare;Green,Green,Any,Any,Any,,,,;3;2;Blocker,target:self;Trample,target:player,keywords:blue&monster,sort:priority;Charge,target:player,keywords:blue&monster,sort:priority;Ready,target:player,keywords:blue&monster,sort:priority
+22;Mirage Stag;Green;Monster;Green,Monster,Beast,,Stag,Rare,Trample,Charge,Ready,Blocker;Rare;Green,Green,Any,Any,Any,,,,;3;2;Blocker,target:self,keywords:blue&monster,sort:priority;Trample,target:player,keywords:blue&monster,sort:priority;Charge,target:player,keywords:blue&monster,sort:priority;Ready,target:player,keywords:blue&monster,sort:priority
 23;Nature's Wrath;Green;Enchantment;Green,Enchantment,Interrupt,,,Common,Sunder,Shatter,,;Common;Green,Any,Any,,,,,,;;;Counter,keywords:monster&uncommon;;;
 24;Protective Canopy;Green;Enchantment;Green,Enchantment,Interrupt,,,Common,Small_tap,,,;Common;Green,Any,,,,,,,;First_Strike,target:player,keywords:blue&monster,sort:priority;;;;;
 25;Quickstrike Prowler;Green;Monster;Green,Monster,Beast,,Feline,Uncommon,First_strike,Pounce,,;Uncommon;Green,Any,Any,Any,,,,,;3;1;First_strike,target:player,keywords:blue&monster,sort:priority;Pounce,target:player,keywords:blue&monster,sort:priority;;

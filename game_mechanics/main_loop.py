@@ -2,7 +2,7 @@
 The tkinker calls this function every few seconds to run the game.
 """
 
-import setup, phases, copy, random
+import setup, phases, copy, random, operator
 import abilities as ab
 
 def reset_game(players):
@@ -70,7 +70,8 @@ def game(players):
     # Player phases
     phases.untap_phase(player)
 
-    phases.sort_hand(player)
+    # Sort hand for the cards in player hand based on the propability them being 
+    player.hand = sorted(player.hand, reverse=True, key=operator.attrgetter("priority"))
 
     play_cards(players)
 

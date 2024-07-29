@@ -13,21 +13,6 @@ def untap_phase(player):
 
 
 
-def sort_hand(player):
-    # arrange cards in priority play order
-    temp_hand = []
-    priority = 4
-    while True:
-        for i, card in enumerate(player.hand):
-            if card.priority > priority:
-                temp_hand.append(player.hand.pop(i))
-        priority -= 1
-        if len(player.hand) == 0: 
-            player.hand = temp_hand
-            break
-
-
-
 def discard_phase(player):
     while len(player.hand) >= player.hand_size:
         player.graveyard.append(player.hand.pop())
