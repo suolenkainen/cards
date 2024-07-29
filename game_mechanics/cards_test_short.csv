@@ -12,7 +12,7 @@
 11;Blue Monster id-11;Blue;Monster;Blue,Monster,,,,Common,Bull_Rush_(red),,,;Common;Blue,Blue,Any,,,,,,;2;1;Bull_Rush,target:player,keywords:blue&monster,sort:priority;;;
 12;Blue Monster id-12;Blue;Monster;Blue,Monster,,,,Common,First_strike,,,;Common;Blue,Any,Any,,,,,,;2;2;;;;
 13;Counterspell;Blue;Enchantment;Blue,Enchantment,Interrupt,,,Common,Tempo,,,;Common;Blue,Any,Any,,,,,,;;;Counter,keywords:monster&uncommon;;;
-14;Coiled Wurm;Green;Monster;Green,Monster,Beast,Blocker,,Common,First_strike,,,;Common;Green,Any,,,,,,,;1;1;First_Strike,target:player,keywords:blue&monster,sort:priority;;;
+14;Coiled Wurm;Green;Monster;Green,Monster,Beast,Blocker,,Common,First_strike,,,;Common;Green,Any,,,,,,,;1;1;First_Strike,target:self;;;
 15;Delicate Power;Green;Enchantment;Green,Enchantment,Deck,,,Uncommon,Draw_3,_discard_1,Tap_2,,;Uncommon;Green,Green,Any,Any,,,,,;;;;;;
 16;Drain;Green;Enchantment;Green,Enchantment,Interrupt,,,Uncommon,Pillage,Draw_card,,;Uncommon;Green,Any,Any,Any,,,,,;;;First_Strike,target:player,keywords:blue&monster,sort:priority;;;
 17;Enchanting Song;Green;Enchantment;Green,Enchantment,Boon,Block,,Common,Restrict_block_3,,,;Common;Green,Any,Any,,,,,,;;;;;;

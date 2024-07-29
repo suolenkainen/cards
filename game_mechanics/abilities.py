@@ -76,8 +76,8 @@ def blocker(players, parameters, **kwargs):
 
 def first_strike(players, parameters, **kwargs):
     # Check if the played card is a monster
-    played_card = kwargs["card"]
-    if played_card.type == "monster":
+    # Later there might be monsters that grant abilities
+    if parameters["target"] == "self":
         return False
 
     # Set target to give an ability
@@ -87,9 +87,14 @@ def first_strike(players, parameters, **kwargs):
     target_cards = copy(action_target.table)
     for keyword in parameters["keywords"]:
         for card in action_target.table:
-            if keyword not in card.keywords or card.type == "monster":
+            if keyword not in card.keywords or card.type != "monster":
                 if card in target_cards:
                     target_cards.remove(card)
+                    continue
+            for ability in card.abilities:
+                if ability[0] == "first_strike" and card in target_cards:
+                    target_cards.remove(card)
+                    continue
     if target_cards == []:
         return False
     
@@ -104,9 +109,7 @@ def first_strike(players, parameters, **kwargs):
         if len(target_cards) < parameters["amount"]:
             amount = len(target_cards)
     for i in range(amount):
-        for ability in target_cards[i].abilities:
-            if ability[0] == "first strike":
-                amount += 1
+        target_cards[i].abilities.append(["first_strike", "target:self"])
 
     return True
 
