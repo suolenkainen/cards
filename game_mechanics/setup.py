@@ -130,6 +130,68 @@ def draw_start_hand(player_deck):
 
 
 
+def reset_game(players):
+    # Reset game so that it can be run multiple times
+    # This should be in the "setup.py" file
+
+    for i in range(2):
+        player = players[i]
+        player.hand = []
+        player.table = []
+        player.manapool = []
+        player.strategy = None
+        player.graveyard = []
+        player.health = 100
+        player.hand_size = 5
+        player.next_draw_amount = 5
+        player.actions = []
+        player.draw_deck = None
+        player.draw_deck = create_draw_deck()
+        player.draw_deck.id = 0
+        player.draw_deck.deck_owner = ""
+        player.draw_deck.deck_purpose = "draw deck"
+        random.seed(player.id)
+        random.shuffle(player.draw_deck.cards)
+        zero_mana = True
+        while zero_mana:
+            player.hand = draw_start_hand(player.draw_deck)
+            for card in player.hand:
+                if card.type == "mana":
+                    zero_mana = False
+                    break
+            if zero_mana:
+                for i in range(5):
+                    player.graveyard.append(player.hand.pop(0))
+
+
+
+def setup_mock_game():
+    # Create players and setup the first run of the game
+    # This should be in the "setup.py" file
+    players = []
+    for i in range(2):
+        player = Player()
+        player.id = i
+        player.name = "player "+str(i)
+        random.seed(player.id)
+        random.shuffle(player.draw_deck.cards)
+        zero_mana = True
+        while zero_mana:
+            player.hand = draw_start_hand(player.draw_deck)
+            for card in player.hand:
+                if card.type == "mana":
+                    zero_mana = False
+                    break
+            if zero_mana:
+                for i in range(5):
+                    player.graveyard.append(player.hand.pop(0))
+
+        players.append(player)
+    
+    return players
+
+
+
 if __name__ == "__main__":
     player_deck = create_draw_deck(0, "player 1")
     hand_cards = draw_start_hand(player_deck)

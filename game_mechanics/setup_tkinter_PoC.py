@@ -7,7 +7,7 @@ This is a mock of the game engine. This will be replaced as soon as possible.
 from tkinter import *
 from tkinter import font
 import setup
-from main_loop import setup_mock_game, game, reset_game
+from main_loop import game
 import csv
 
 # Check that cards are present
@@ -176,7 +176,7 @@ def align_text_and_row(text):
     return text
 
 
-players = setup_mock_game()
+players = setup.setup_mock_game()
 
 # create_card_to_UI(players)
 
@@ -195,11 +195,11 @@ def time_print():
 
     if players[1].health <= 0 or len(players[1].draw_deck.cards) == 0:
         print(players[0].name, "WINS!")
-        reset_game(players)
+        setup.reset_game(players)
         games -= 1
     if players[0].health <= 0 or len(players[0].draw_deck.cards) == 0:
         print(players[1].name, "WINS!")
-        reset_game(players)
+        setup.reset_game(players)
         games -= 1
     if games == 0:
         root.destroy()
