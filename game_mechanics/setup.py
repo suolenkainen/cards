@@ -1,6 +1,6 @@
 """
 Read the contents of a csv file and create a deck based on that.
-The deck_object() class is also used to create graveyard deck.
+The Deck() class is also used to create graveyard deck.
 
 To chose the source of data, uncomment which ever file is needed
 """
@@ -20,7 +20,7 @@ del reader, file
 
 
 
-class player_object():
+class Player():
     def __init__(self):
         self.id = 0
         self.name = "player 0"
@@ -45,13 +45,13 @@ class player_object():
 
 def create_draw_deck(id=0, owner="player 1"):
     # Create Deck-object
-    player_deck = deck_object()
+    player_deck = Deck()
     player_deck.id = id
     player_deck.deck_owner = owner
 
     # Create cards from test file
     for card_dict in list_of_card_dicts:
-        player_deck.cards.append(card_object(card_dict))
+        player_deck.cards.append(Card(card_dict))
     
     #Shuffle deck
     random.seed(player_deck.id)
@@ -61,7 +61,7 @@ def create_draw_deck(id=0, owner="player 1"):
 
 
 
-class card_object():
+class Card():
     def __init__(self, data):
         # Create a card containing relevant information
         # Parse the data to be readable
@@ -111,7 +111,8 @@ class card_object():
         return value
 
 
-class deck_object():
+
+class Deck():
     def __init__(self):
         self.id = 0
         self.deck_owner = ""
@@ -132,5 +133,5 @@ def draw_start_hand(player_deck):
 if __name__ == "__main__":
     player_deck = create_draw_deck(0, "player 1")
     hand_cards = draw_start_hand(player_deck)
-    player = player_object
+    player = Player()
     print()

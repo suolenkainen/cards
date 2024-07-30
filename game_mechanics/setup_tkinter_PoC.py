@@ -1,8 +1,6 @@
 """
-Setup UI to watch the game play out.
 
-This is not the game loop but to set up the correct layout that enables visualization of the game.
-This also creates the UI for following card values in stock market.
+This is a mock of the game engine. This will be replaced as soon as possible.
 
 """
 

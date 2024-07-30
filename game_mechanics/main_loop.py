@@ -1,12 +1,9 @@
-"""
-The tkinker calls this function every few seconds to run the game.
-"""
-
 import setup, phases, copy, random, operator
 import abilities as ab
 
 def reset_game(players):
-    # Create players
+    # Reset game so that it can be run multiple times
+    # This should be in the "setup.py" file
 
     for i in range(2):
         player = players[i]
@@ -39,7 +36,8 @@ def reset_game(players):
 
 
 def setup_mock_game():
-    # Create players
+    # Create players and setup the first run of the game
+    # This should be in the "setup.py" file
     players = []
     for i in range(2):
         player = setup.player_object()
@@ -65,6 +63,7 @@ def setup_mock_game():
 
 
 def game(players):
+    # Play one round of game with the different phases
     player = players[0]
     
     # Player phases
@@ -73,12 +72,16 @@ def game(players):
     # Sort hand for the cards in player hand based on the propability them being 
     player.hand = sorted(player.hand, reverse=True, key=operator.attrgetter("priority"))
 
+    # Play cards from hand based on priority
     play_cards(players)
 
+    # Play out actions set in the untap phase 
     phases.action(players)
 
+    # Discard cards to be able to draw new cards each turn
     phases.discard_phase(player)
 
+    # Draw cards to the maximum of hand limit
     phases.draw_cards(player)
 
     # Switch order. After player 1 has played, turn counter rises by one.
@@ -88,6 +91,8 @@ def game(players):
 
 
 def play_cards(players):
+    # Play cards from hand to table or as enchantments
+    # This function is quite difficult to understand and requires refactoring
     player = players[0]
     has_played_mana = False
     
@@ -142,7 +147,6 @@ def play_cards(players):
 
 
 def opponent_interrupt(players, card, **kwargs):
-    # receive opponent card that was played
 
     ## Create counter ability first
     if any("interrupt" in card.keywords for card in players[1].hand):
@@ -159,8 +163,13 @@ def opponent_interrupt(players, card, **kwargs):
 
     return False, False
 
+
+
 def cancel_play():
+    # Placeholder for interrupting playing a card
     pass
+
+
 
 if __name__ == "__main__":
     setup_mock_game()

@@ -1,7 +1,12 @@
-Test for phases.sort_hand
+Change the "attack" phase so that "blocker" is an ability instead of just a keyword
+
 Create Enchantment validity
+
 Create a more clear setup for a game
     Create a four times deck
         When other wins, the cards they use get a point (name of card, no mana)
+
+Rewrite the reset and game setup functions
+    Move them to setup.py
 
 Ability to run games headless and multi-thread

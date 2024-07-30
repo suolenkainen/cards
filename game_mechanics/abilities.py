@@ -51,7 +51,7 @@ def untap(players, parameters, **kwargs):
 
 
 def counter(players, parameters, **kwargs):
-    # target
+    # Counter a card played by the opponent
     variables = kwargs["variables"]
     target_card = variables["played_card"]
     interrupt_card = variables["interrupt_card"]
@@ -60,19 +60,15 @@ def counter(players, parameters, **kwargs):
         if keyword not in target_card.keywords:
             return False
     
+    # If the counter is successful, remove both target and countering card
     players[0].hand.remove(target_card)
     players[0].graveyard.append(target_card)
-
     players[1].hand.remove(interrupt_card)
     players[1].graveyard.append(interrupt_card)
 
     return True
 
 
-
-def blocker(players, parameters, **kwargs):
-    # Don't remove card if not an instant
-    print(parameters)
 
 def first_strike(players, parameters, **kwargs):
     # Check if the played card is a monster
@@ -114,88 +110,78 @@ def first_strike(players, parameters, **kwargs):
     return True
 
 
+# This list of abilities is a place holder for upcoming ability descriptions. They are filled as they come relevant.
+# This point they are just place holders to avoid errors
+def blocker(players, parameters, **kwargs):
+    # Don't remove card if not an instant
+    pass
+
 def draw_card(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def pounce(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def trample(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def psychic(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def enchant_creature(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def control(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def psychic_blast(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def front_line(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def bull_rush(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def ranged(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def sunder(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def shatter(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def charge(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def ready(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
+    pass
 
 def defender(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
-
-
+    pass
 
 def tap(players, parameters, **kwargs):
     # Don't remove card if not an instant
-    print(parameters)
+    pass
 
 
 
-# Util function 
+# Create a list of sorting keywords. This returns either one parameter or more
 def create_key_function(attrs: List[str]):
     return operator.attrgetter(*attrs)
