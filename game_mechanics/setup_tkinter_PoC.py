@@ -6,13 +6,13 @@ This is a mock of the game engine. This will be replaced as soon as possible.
 
 from tkinter import *
 from tkinter import font
-import setup
+import setup_4deck
 from main_loop import game
 import csv
 
-# Check that cards are present
-mock_deck = setup.create_draw_deck(1, "PoC")
-mock_hand = setup.draw_start_hand(mock_deck)
+# # Check that cards are present
+# mock_deck = setup_4deck.create_draw_deck(1, "PoC")
+# mock_hand = setup_4deck.draw_start_hand(mock_deck)
 
 # Create a csv file of saving the statistics
 with open('test_record.csv', 'w', newline='') as file:
@@ -176,36 +176,53 @@ def align_text_and_row(text):
     return text
 
 
-players = setup.setup_mock_game()
+players = setup_4deck.setup_mock_game()
 
 # create_card_to_UI(players)
-
 def time_print():
     games = 5
     game(players)
     create_card_to_UI(players)
         
-    with open('test_record.csv', 'a', newline='') as file:
-        writer = csv.writer(file)
-        data = [
-            [players[0].__dict__],
-            [players[1].__dict__]
-            ]
-        writer.writerows(data)
 
     if players[1].health <= 0 or len(players[1].draw_deck.cards) == 0:
         print(players[0].name, "WINS!")
-        setup.reset_game(players)
-        games -= 1
+        for graveyard_card in players[0].graveyard:
+            update_cards(graveyard_card)
+        for hand_card in players[0].hand:
+            update_cards(hand_card)
+        for deck_card in players[0].draw_deck.cards:
+            update_cards(deck_card)
+        setup_4deck.reset_game(players)
     if players[0].health <= 0 or len(players[0].draw_deck.cards) == 0:
         print(players[1].name, "WINS!")
-        setup.reset_game(players)
-        games -= 1
+        for graveyard_card in players[1].graveyard:
+            update_cards(graveyard_card)
+        for hand_card in players[1].hand:
+            update_cards(hand_card)
+        for deck_card in players[1].draw_deck.cards:
+            update_cards(deck_card)
+        setup_4deck.reset_game(players)
     if games == 0:
         root.destroy()
         return
 
-    root.after(200, time_print)
+    root.after(2, time_print)
+
+def update_cards(card):
+    
+    card.wins += 1
+    card.win_average = card.wins/card.rounds
+    card.duplicates += 1
+    card.average_duplicates = (card.duplicates + card.average_duplicates)/2
+            
+    with open('test_record.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        data = [
+            [card.name, card.rounds, card.wins, card.win_average, card.duplicates, card.average_duplicates]
+        ]
+        writer.writerows(data)
+
 
 # Run UI
 time_print()

@@ -24,7 +24,7 @@ class Player():
     def __init__(self):
         self.id = 0
         self.name = "player 0"
-        self.create_deck()
+        self.create_decks()
         self.hand = []
         self.table = []
         self.manapool = []
@@ -35,15 +35,21 @@ class Player():
         self.next_draw_amount = 5
         self.actions = []
 
-    def create_deck(self):
-        self.draw_deck = create_draw_deck()
+    def create_decks(self):
+        self.player_deck = create_player_deck()
+        self.player_deck.id = 0
+        self.player_deck.deck_owner = ""
+        self.player_deck.deck_purpose = "player deck"
+
+        self.draw_deck = create_draw_deck(self.player_deck)
         self.draw_deck.id = 0
         self.draw_deck.deck_owner = ""
         self.draw_deck.deck_purpose = "draw deck"
 
 
 
-def create_draw_deck(id=0, owner="player 1"):
+
+def create_player_deck(id=0, owner="player 1"):
     # Create Deck-object
     player_deck = Deck()
     player_deck.id = id
@@ -53,11 +59,37 @@ def create_draw_deck(id=0, owner="player 1"):
     for card_dict in list_of_card_dicts:
         player_deck.cards.append(Card(card_dict))
     
-    #Shuffle deck
+    player_deck.cards = player_deck.cards * 4
+
     random.seed(player_deck.id)
     random.shuffle(player_deck.cards)
     
     return player_deck
+
+
+
+def create_draw_deck(player_deck):
+    # Create Deck-object
+    draw_deck = Deck()
+    draw_deck.id = player_deck.id
+    draw_deck.deck_owner = player_deck.deck_owner
+
+    # Create cards from test file
+    current_game = player_deck.cards[0].rounds
+
+    random.seed(current_game + draw_deck.id)
+    random.shuffle(player_deck.cards)
+    draw_deck.cards = player_deck.cards[:32]
+
+    #Shuffle deck
+    random.seed(draw_deck.id)
+    random.shuffle(draw_deck.cards)
+
+    for playcard in draw_deck.cards:
+        playcard.rounds = playcard.rounds + 1
+        playcard.duplicates = 1
+    
+    return draw_deck
 
 
 
@@ -141,6 +173,7 @@ def reset_game(players):
 
     for i in range(2):
         player = players[i]
+
         player.hand = []
         player.table = []
         player.manapool = []
@@ -150,13 +183,11 @@ def reset_game(players):
         player.hand_size = 5
         player.next_draw_amount = 5
         player.actions = []
-        player.draw_deck = None
-        player.draw_deck = create_draw_deck()
+
+        player.draw_deck = create_draw_deck(player.player_deck)
         player.draw_deck.id = 0
         player.draw_deck.deck_owner = ""
         player.draw_deck.deck_purpose = "draw deck"
-        random.seed(player.id)
-        random.shuffle(player.draw_deck.cards)
         zero_mana = True
         while zero_mana:
             player.hand = draw_start_hand(player.draw_deck)
@@ -198,7 +229,8 @@ def setup_mock_game():
 
 
 if __name__ == "__main__":
-    player_deck = create_draw_deck(0, "player 1")
-    hand_cards = draw_start_hand(player_deck)
+    player_deck = create_player_deck(id=0, owner="player 1")
+    draw_deck = create_draw_deck(player_deck)
+    hand_cards = draw_start_hand(draw_deck)
     player = Player()
     print()
